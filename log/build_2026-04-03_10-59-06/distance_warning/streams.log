@@ -1,0 +1,33 @@
+[0.014s] Invoking command in '/home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble DEBUGINFOD_URLS=ima:enforcing https://debuginfod.fedoraproject.org/ ima:ignore PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning -- -j32 -l32
+[0.095s] [  2%] Built target distance_warning__rs
+[0.096s] [ 11%] Built target distance_warning__rosidl_generator_c
+[0.099s] [ 14%] Built target distance_warning__cpp
+[0.107s] [ 16%] [32mBuilding CXX object CMakeFiles/distance_listener.dir/src/distance_listener.cpp.o[0m
+[0.110s] [ 16%] Built target ament_cmake_python_copy_distance_warning
+[0.129s] [ 26%] Built target distance_warning__rosidl_typesupport_introspection_c
+[0.134s] [ 35%] Built target distance_warning__rosidl_typesupport_c
+[0.135s] [ 45%] Built target distance_warning__rosidl_typesupport_cpp
+[0.136s] [ 54%] Built target distance_warning__rosidl_typesupport_fastrtps_c
+[0.137s] [ 64%] Built target distance_warning__rosidl_typesupport_introspection_cpp
+[0.139s] [ 73%] Built target distance_warning__rosidl_typesupport_fastrtps_cpp
+[0.168s] [ 73%] Built target distance_warning
+[0.199s] [ 76%] Built target distance_warning__py
+[0.234s] [ 83%] Built target distance_warning__rosidl_generator_py
+[0.267s] [ 88%] Built target distance_warning__rosidl_typesupport_introspection_c__pyext
+[0.273s] [ 92%] Built target distance_warning__rosidl_typesupport_fastrtps_c__pyext
+[0.273s] [ 97%] Built target distance_warning__rosidl_typesupport_c__pyext
+[0.343s] running egg_info
+[0.343s] writing distance_warning.egg-info/PKG-INFO
+[0.344s] writing dependency_links to distance_warning.egg-info/dependency_links.txt
+[0.344s] writing top-level names to distance_warning.egg-info/top_level.txt
+[0.346s] reading manifest file 'distance_warning.egg-info/SOURCES.txt'
+[0.346s] writing manifest file 'distance_warning.egg-info/SOURCES.txt'
+[0.379s] [ 97%] Built target ament_cmake_python_build_distance_warning_egg
+[2.815s] [100%] [32m[1mLinking CXX executable distance_listener[0m
+[2.919s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[2.919s] (.text+0x1b): undefined reference to `main'
+[2.923s] collect2: error: ld returned 1 exit status
+[2.925s] gmake[2]: *** [CMakeFiles/distance_listener.dir/build.make:159: distance_listener] Error 1
+[2.926s] gmake[1]: *** [CMakeFiles/Makefile2:611: CMakeFiles/distance_listener.dir/all] Error 2
+[2.927s] gmake: *** [Makefile:146: all] Error 2
+[2.931s] Invoked command in '/home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble DEBUGINFOD_URLS=ima:enforcing https://debuginfod.fedoraproject.org/ ima:ignore PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning -- -j32 -l32

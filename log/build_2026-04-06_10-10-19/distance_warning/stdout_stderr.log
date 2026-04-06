@@ -1,0 +1,78 @@
+[  2%] Built target distance_warning__rs
+[  4%] Built target distance_warning__cpp
+[ 12%] Built target distance_warning__rosidl_generator_c
+[ 14%] Built target ament_cmake_python_copy_distance_warning
+[ 14%] [32mBuilding CXX object CMakeFiles/distance_listener.dir/src/distance_listener.cpp.o[0m
+[ 18%] Built target distance_publisher
+[ 26%] Built target distance_warning__rosidl_typesupport_introspection_cpp
+[ 42%] Built target distance_warning__rosidl_typesupport_fastrtps_cpp
+[ 42%] Built target distance_warning__rosidl_typesupport_cpp
+[ 50%] Built target distance_warning__rosidl_typesupport_c
+[ 64%] Built target distance_warning__rosidl_typesupport_introspection_c
+[ 66%] Built target distance_warning__rosidl_typesupport_fastrtps_c
+[ 66%] Built target distance_warning
+[ 68%] Built target distance_warning__py
+[ 70%] [32mBuilding CXX object CMakeFiles/set_threshold_service.dir/src/set_threshold_service.cpp.o[0m
+[ 74%] Built target distance_action_server
+[ 78%] Built target distance_action_client
+[ 84%] Built target distance_warning__rosidl_generator_py
+[ 88%] Built target distance_warning__rosidl_typesupport_c__pyext
+[ 92%] Built target distance_warning__rosidl_typesupport_introspection_c__pyext
+[ 96%] Built target distance_warning__rosidl_typesupport_fastrtps_c__pyext
+running egg_info
+writing distance_warning.egg-info/PKG-INFO
+writing dependency_links to distance_warning.egg-info/dependency_links.txt
+writing top-level names to distance_warning.egg-info/top_level.txt
+reading manifest file 'distance_warning.egg-info/SOURCES.txt'
+writing manifest file 'distance_warning.egg-info/SOURCES.txt'
+[ 96%] Built target ament_cmake_python_build_distance_warning_egg
+[01m[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:65:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ was not declared in this scope
+   65 |   rclcpp::Publisher<[01;31m[Kstd_msgs[m[K::msg::Float32>::SharedPtr threshold_pub_;
+      |                     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:65:43:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   65 |   rclcpp::Publisher<std_msgs::msg::Float32[01;31m[K>[m[K::SharedPtr threshold_pub_;
+      |                                           [01;31m[K^[m[K
+[01m[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:65:46:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   65 |   rclcpp::Publisher<std_msgs::msg::Float32>::[01;31m[KSharedPtr[m[K threshold_pub_;
+      |                                              [01;31m[K^~~~~~~~~[m[K
+      |                                                       [32m[K;[m[K
+[01m[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:65:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kthreshold_pub_[m[K’ does not name a type
+   65 |   rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr [01;31m[Kthreshold_pub_[m[K;
+      |                                                        [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:[m[K In constructor ‘[01m[KSetThresholdService::SetThresholdService()[m[K’:
+[01m[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:17:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kthreshold_pub_[m[K’ was not declared in this scope
+   17 |     [01;31m[Kthreshold_pub_[m[K = this->create_publisher<std_msgs::msg::Float32>("current_threshold", qos);
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:17:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ was not declared in this scope
+   17 |     threshold_pub_ = this->create_publisher<[01;31m[Kstd_msgs[m[K::msg::Float32>("current_threshold", qos);
+      |                                             [01;31m[K^~~~~~~~[m[K
+[01m[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:17:28:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+   17 |     threshold_pub_ = this->[01;31m[Kcreate_publisher<std_msgs::msg::Float32>[m[K("current_threshold", qos);
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:17:68:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KSetThresholdService::create_publisher<<expression error> >(const char [18], rclcpp::QoS&)[m[K’
+   17 |     threshold_pub_ = [01;31m[Kthis->create_publisher<std_msgs::msg::Float32>("current_threshold", qos)[m[K;
+      |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+  195 |   [01;36m[Kcreate_publisher[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:17:68:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   17 |     threshold_pub_ = [01;31m[Kthis->create_publisher<std_msgs::msg::Float32>("current_threshold", qos)[m[K;
+      |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:[m[K In member function ‘[01m[Kvoid SetThresholdService::handleSetThreshold(distance_warning::srv::SetThreshold_Request_<std::allocator<void> >::SharedPtr, distance_warning::srv::SetThreshold_Response_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:50:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ has not been declared
+   50 |     auto msg = [01;31m[Kstd_msgs[m[K::msg::Float32();
+      |                [01;31m[K^~~~~~~~[m[K
+[01m[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:52:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kthreshold_pub_[m[K’ was not declared in this scope
+   52 |     [01;31m[Kthreshold_pub_[m[K->publish(msg);
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/set_threshold_service.dir/build.make:76: CMakeFiles/set_threshold_service.dir/src/set_threshold_service.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:673: CMakeFiles/set_threshold_service.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 98%] [32m[1mLinking CXX executable distance_listener[0m
+[ 98%] Built target distance_listener
+gmake: *** [Makefile:146: all] Error 2

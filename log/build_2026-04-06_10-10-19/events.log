@@ -1,0 +1,176 @@
+[0.000000] (-) TimerEvent: {}
+[0.000249] (distance_warning) JobQueued: {'identifier': 'distance_warning', 'dependencies': OrderedDict()}
+[0.000332] (distance_warning) JobStarted: {'identifier': 'distance_warning'}
+[0.011179] (distance_warning) JobProgress: {'identifier': 'distance_warning', 'progress': 'cmake'}
+[0.013760] (distance_warning) JobProgress: {'identifier': 'distance_warning', 'progress': 'build'}
+[0.013877] (distance_warning) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning', '--', '-j32', '-l32'], 'cwd': '/home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/spool/mail/loc'), ('USER', 'loc'), ('HOSTNAME', 'fedora'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('XDG_CACHE_HOME', '/home/loc/.distrobox/ros2-home/.cache'), ('SHLVL', '4'), ('LD_LIBRARY_PATH', '/home/loc/.distrobox/ros2-home/ros2_ws/install/distance_warning/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/loc/.distrobox/ros2-home'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.114.0'), ('DESKTOP_SESSION', 'gnome'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GK_GL_PATH', '/tmp/gitkraken/gitlens/gitlens-ipc-server-91403-40775.json'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('PS1', '\\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '5146'), ('DISTROBOX_ENTER_PATH', '/usr/bin/distrobox-enter'), ('SYSTEMD_EXEC_PID', '5690'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('XDG_STATE_HOME', '/home/loc/.distrobox/ros2-home/.local/state'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('container', 'podman'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '91403'), ('MOZ_GMP_PATH', '/usr/lib64/mozilla/plugins/gmp-gmpopenh264/system-installed'), ('DEBUGINFOD_URLS', 'ima:enforcing https://debuginfod.fedoraproject.org/ ima:ignore'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/loc/.distrobox/ros2-home/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'loc'), ('MANAGERPIDFDID', '5147'), ('JOURNAL_STREAM', '9:27455'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('MEMORY_PRESSURE_WATCH', '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure'), ('XDG_SESSION_CLASS', 'user'), ('TERMINFO_DIRS', '/usr/share/terminfo:/run/host/usr/share/terminfo'), ('USERNAME', 'loc'), ('TERM', 'xterm-256color'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('HISTCONTROL', 'ignoreboth'), ('PATH', '/home/loc/.distrobox/ros2-home/.local/bin:/home/loc/.distrobox/ros2-home/.local/bin:/opt/ros/humble/bin:/home/loc/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/loc/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/loc/.local/bin:/home/loc/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin'), ('GDM_LANG', 'en_US.UTF-8'), ('INVOCATION_ID', '84ec9931f68649b0b76efbe51c7f1dd7'), ('DISTROBOX_HOST_HOME', '/home/loc'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'wayland'), ('DISPLAY', ':0'), ('HISTSIZE', '1000'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'GNOME'), ('XDG_DATA_HOME', '/home/loc/.distrobox/ros2-home/.local/share'), ('XDG_CONFIG_HOME', '/home/loc/.distrobox/ros2-home/.config'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'gnome'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.DHAMN3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-ca9b73843b.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/gcr/ssh'), ('AMENT_PREFIX_PATH', '/home/loc/.distrobox/ros2-home/ros2_ws/install/distance_warning:/opt/ros/humble'), ('SHELL', '/usr/bin/bash'), ('NO_AT_BRIDGE', '1'), ('GDMSESSION', 'gnome'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GK_GL_ADDR', 'http://127.0.0.1:40775'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('DEBUGINFOD_IMA_CERT_PATH', '/etc/keys/ima:'), ('GPG_TTY', '/dev/pts/6'), ('PWD', '/home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning'), ('CONTAINER_ID', 'ros2'), ('XDG_CONFIG_DIRS', '/etc/xdg'), ('XDG_DATA_DIRS', '/home/loc/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/usr/local/share:/usr/share'), ('PYTHONPATH', '/home/loc/.distrobox/ros2-home/ros2_ws/install/distance_warning/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('QT_IM_MODULES', 'wayland;ibus'), ('MEMORY_PRESSURE_WRITE', 'c29tZSAyMDAwMDAgMjAwMDAwMAA='), ('EDITOR', '/usr/bin/nano'), ('CMAKE_PREFIX_PATH', '/home/loc/.distrobox/ros2-home/ros2_ws/install/distance_warning:/opt/ros/humble')]), 'shell': False}
+[0.099231] (-) TimerEvent: {}
+[0.111205] (distance_warning) StdoutLine: {'line': b'[  2%] Built target distance_warning__rs\n'}
+[0.113383] (distance_warning) StdoutLine: {'line': b'[  4%] Built target distance_warning__cpp\n'}
+[0.113848] (distance_warning) StdoutLine: {'line': b'[ 12%] Built target distance_warning__rosidl_generator_c\n'}
+[0.124393] (distance_warning) StdoutLine: {'line': b'[ 14%] Built target ament_cmake_python_copy_distance_warning\n'}
+[0.124852] (distance_warning) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/distance_listener.dir/src/distance_listener.cpp.o\x1b[0m\n'}
+[0.125049] (distance_warning) StdoutLine: {'line': b'[ 18%] Built target distance_publisher\n'}
+[0.155991] (distance_warning) StdoutLine: {'line': b'[ 26%] Built target distance_warning__rosidl_typesupport_introspection_cpp\n'}
+[0.156605] (distance_warning) StdoutLine: {'line': b'[ 42%] Built target distance_warning__rosidl_typesupport_fastrtps_cpp\n'}
+[0.156825] (distance_warning) StdoutLine: {'line': b'[ 42%] Built target distance_warning__rosidl_typesupport_cpp\n'}
+[0.164425] (distance_warning) StdoutLine: {'line': b'[ 50%] Built target distance_warning__rosidl_typesupport_c\n'}
+[0.165451] (distance_warning) StdoutLine: {'line': b'[ 64%] Built target distance_warning__rosidl_typesupport_introspection_c\n'}
+[0.165701] (distance_warning) StdoutLine: {'line': b'[ 66%] Built target distance_warning__rosidl_typesupport_fastrtps_c\n'}
+[0.197267] (distance_warning) StdoutLine: {'line': b'[ 66%] Built target distance_warning\n'}
+[0.199383] (-) TimerEvent: {}
+[0.235829] (distance_warning) StdoutLine: {'line': b'[ 68%] Built target distance_warning__py\n'}
+[0.242603] (distance_warning) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/set_threshold_service.dir/src/set_threshold_service.cpp.o\x1b[0m\n'}
+[0.246688] (distance_warning) StdoutLine: {'line': b'[ 74%] Built target distance_action_server\n'}
+[0.247228] (distance_warning) StdoutLine: {'line': b'[ 78%] Built target distance_action_client\n'}
+[0.275205] (distance_warning) StdoutLine: {'line': b'[ 84%] Built target distance_warning__rosidl_generator_py\n'}
+[0.299532] (-) TimerEvent: {}
+[0.310164] (distance_warning) StdoutLine: {'line': b'[ 88%] Built target distance_warning__rosidl_typesupport_c__pyext\n'}
+[0.313933] (distance_warning) StdoutLine: {'line': b'[ 92%] Built target distance_warning__rosidl_typesupport_introspection_c__pyext\n'}
+[0.315000] (distance_warning) StdoutLine: {'line': b'[ 96%] Built target distance_warning__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.399704] (-) TimerEvent: {}
+[0.409189] (distance_warning) StdoutLine: {'line': b'running egg_info\n'}
+[0.410208] (distance_warning) StdoutLine: {'line': b'writing distance_warning.egg-info/PKG-INFO\n'}
+[0.410516] (distance_warning) StdoutLine: {'line': b'writing dependency_links to distance_warning.egg-info/dependency_links.txt\n'}
+[0.410672] (distance_warning) StdoutLine: {'line': b'writing top-level names to distance_warning.egg-info/top_level.txt\n'}
+[0.412640] (distance_warning) StdoutLine: {'line': b"reading manifest file 'distance_warning.egg-info/SOURCES.txt'\n"}
+[0.413172] (distance_warning) StdoutLine: {'line': b"writing manifest file 'distance_warning.egg-info/SOURCES.txt'\n"}
+[0.445250] (distance_warning) StdoutLine: {'line': b'[ 96%] Built target ament_cmake_python_build_distance_warning_egg\n'}
+[0.499975] (-) TimerEvent: {}
+[0.600479] (-) TimerEvent: {}
+[0.701039] (-) TimerEvent: {}
+[0.801707] (-) TimerEvent: {}
+[0.902300] (-) TimerEvent: {}
+[1.002914] (-) TimerEvent: {}
+[1.103582] (-) TimerEvent: {}
+[1.204229] (-) TimerEvent: {}
+[1.304869] (-) TimerEvent: {}
+[1.405528] (-) TimerEvent: {}
+[1.506145] (-) TimerEvent: {}
+[1.606658] (-) TimerEvent: {}
+[1.707300] (-) TimerEvent: {}
+[1.807907] (-) TimerEvent: {}
+[1.908443] (-) TimerEvent: {}
+[2.009192] (-) TimerEvent: {}
+[2.109626] (-) TimerEvent: {}
+[2.210090] (-) TimerEvent: {}
+[2.310440] (-) TimerEvent: {}
+[2.410862] (-) TimerEvent: {}
+[2.511206] (-) TimerEvent: {}
+[2.611583] (-) TimerEvent: {}
+[2.712052] (-) TimerEvent: {}
+[2.736832] (distance_warning) StderrLine: {'line': b'\x1b[01m\x1b[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:65:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstd_msgs\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.737120] (distance_warning) StderrLine: {'line': b'   65 |   rclcpp::Publisher<\x1b[01;31m\x1b[Kstd_msgs\x1b[m\x1b[K::msg::Float32>::SharedPtr threshold_pub_;\n'}
+[2.737203] (distance_warning) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.737258] (distance_warning) StderrLine: {'line': b'\x1b[01m\x1b[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:65:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.737314] (distance_warning) StderrLine: {'line': b'   65 |   rclcpp::Publisher<std_msgs::msg::Float32\x1b[01;31m\x1b[K>\x1b[m\x1b[K::SharedPtr threshold_pub_;\n'}
+[2.737365] (distance_warning) StderrLine: {'line': b'      |                                           \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.737415] (distance_warning) StderrLine: {'line': b'\x1b[01m\x1b[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:65:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 at end of member declaration\n'}
+[2.737472] (distance_warning) StderrLine: {'line': b'   65 |   rclcpp::Publisher<std_msgs::msg::Float32>::\x1b[01;31m\x1b[KSharedPtr\x1b[m\x1b[K threshold_pub_;\n'}
+[2.737526] (distance_warning) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.737575] (distance_warning) StderrLine: {'line': b'      |                                                       \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[2.739550] (distance_warning) StderrLine: {'line': b'\x1b[01m\x1b[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:65:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kthreshold_pub_\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[2.739703] (distance_warning) StderrLine: {'line': b'   65 |   rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr \x1b[01;31m\x1b[Kthreshold_pub_\x1b[m\x1b[K;\n'}
+[2.739767] (distance_warning) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.751491] (distance_warning) StderrLine: {'line': b'\x1b[01m\x1b[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KSetThresholdService::SetThresholdService()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.751662] (distance_warning) StderrLine: {'line': b'\x1b[01m\x1b[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:17:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kthreshold_pub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.751739] (distance_warning) StderrLine: {'line': b'   17 |     \x1b[01;31m\x1b[Kthreshold_pub_\x1b[m\x1b[K = this->create_publisher<std_msgs::msg::Float32>("current_threshold", qos);\n'}
+[2.751798] (distance_warning) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.757939] (distance_warning) StderrLine: {'line': b'\x1b[01m\x1b[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:17:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstd_msgs\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.758120] (distance_warning) StderrLine: {'line': b'   17 |     threshold_pub_ = this->create_publisher<\x1b[01;31m\x1b[Kstd_msgs\x1b[m\x1b[K::msg::Float32>("current_threshold", qos);\n'}
+[2.758185] (distance_warning) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.758248] (distance_warning) StderrLine: {'line': b'\x1b[01m\x1b[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:17:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kparse error in template argument list\n'}
+[2.758308] (distance_warning) StderrLine: {'line': b'   17 |     threshold_pub_ = this->\x1b[01;31m\x1b[Kcreate_publisher<std_msgs::msg::Float32>\x1b[m\x1b[K("current_threshold", qos);\n'}
+[2.758360] (distance_warning) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.758415] (distance_warning) StderrLine: {'line': b'\x1b[01m\x1b[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:17:68:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KSetThresholdService::create_publisher<<expression error> >(const char [18], rclcpp::QoS&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.758469] (distance_warning) StderrLine: {'line': b'   17 |     threshold_pub_ = \x1b[01;31m\x1b[Kthis->create_publisher<std_msgs::msg::Float32>("current_threshold", qos)\x1b[m\x1b[K;\n'}
+[2.758519] (distance_warning) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.758570] (distance_warning) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[2.758622] (distance_warning) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[2.758671] (distance_warning) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.758720] (distance_warning) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:1\x1b[m\x1b[K:\n'}
+[2.758769] (distance_warning) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.758828] (distance_warning) StderrLine: {'line': b'  195 |   \x1b[01;36m\x1b[Kcreate_publisher\x1b[m\x1b[K(\n'}
+[2.758880] (distance_warning) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.758928] (distance_warning) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:195:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[2.758986] (distance_warning) StderrLine: {'line': b'\x1b[01m\x1b[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:17:68:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.759034] (distance_warning) StderrLine: {'line': b'   17 |     threshold_pub_ = \x1b[01;31m\x1b[Kthis->create_publisher<std_msgs::msg::Float32>("current_threshold", qos)\x1b[m\x1b[K;\n'}
+[2.759080] (distance_warning) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.769975] (distance_warning) StderrLine: {'line': b'\x1b[01m\x1b[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SetThresholdService::handleSetThreshold(distance_warning::srv::SetThreshold_Request_<std::allocator<void> >::SharedPtr, distance_warning::srv::SetThreshold_Response_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.770140] (distance_warning) StderrLine: {'line': b'\x1b[01m\x1b[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:50:16:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstd_msgs\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[2.770206] (distance_warning) StderrLine: {'line': b'   50 |     auto msg = \x1b[01;31m\x1b[Kstd_msgs\x1b[m\x1b[K::msg::Float32();\n'}
+[2.770262] (distance_warning) StderrLine: {'line': b'      |                \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[2.778947] (distance_warning) StderrLine: {'line': b'\x1b[01m\x1b[K/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning/src/set_threshold_service.cpp:52:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kthreshold_pub_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.779114] (distance_warning) StderrLine: {'line': b'   52 |     \x1b[01;31m\x1b[Kthreshold_pub_\x1b[m\x1b[K->publish(msg);\n'}
+[2.779186] (distance_warning) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.812256] (-) TimerEvent: {}
+[2.912652] (-) TimerEvent: {}
+[3.013049] (-) TimerEvent: {}
+[3.113367] (-) TimerEvent: {}
+[3.213752] (-) TimerEvent: {}
+[3.314158] (-) TimerEvent: {}
+[3.404134] (distance_warning) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/set_threshold_service.dir/build.make:76: CMakeFiles/set_threshold_service.dir/src/set_threshold_service.cpp.o] Error 1\n'}
+[3.404607] (distance_warning) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:673: CMakeFiles/set_threshold_service.dir/all] Error 2\n'}
+[3.404765] (distance_warning) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[3.414347] (-) TimerEvent: {}
+[3.514701] (-) TimerEvent: {}
+[3.615089] (-) TimerEvent: {}
+[3.715480] (-) TimerEvent: {}
+[3.815781] (-) TimerEvent: {}
+[3.916122] (-) TimerEvent: {}
+[4.016515] (-) TimerEvent: {}
+[4.116907] (-) TimerEvent: {}
+[4.217221] (-) TimerEvent: {}
+[4.317536] (-) TimerEvent: {}
+[4.417913] (-) TimerEvent: {}
+[4.518316] (-) TimerEvent: {}
+[4.618699] (-) TimerEvent: {}
+[4.719116] (-) TimerEvent: {}
+[4.819507] (-) TimerEvent: {}
+[4.919899] (-) TimerEvent: {}
+[5.020323] (-) TimerEvent: {}
+[5.120754] (-) TimerEvent: {}
+[5.221113] (-) TimerEvent: {}
+[5.321519] (-) TimerEvent: {}
+[5.421920] (-) TimerEvent: {}
+[5.522321] (-) TimerEvent: {}
+[5.622737] (-) TimerEvent: {}
+[5.723100] (-) TimerEvent: {}
+[5.823501] (-) TimerEvent: {}
+[5.923893] (-) TimerEvent: {}
+[6.024275] (-) TimerEvent: {}
+[6.124669] (-) TimerEvent: {}
+[6.225053] (-) TimerEvent: {}
+[6.325466] (-) TimerEvent: {}
+[6.425849] (-) TimerEvent: {}
+[6.526254] (-) TimerEvent: {}
+[6.626676] (-) TimerEvent: {}
+[6.727083] (-) TimerEvent: {}
+[6.827469] (-) TimerEvent: {}
+[6.927868] (-) TimerEvent: {}
+[7.028297] (-) TimerEvent: {}
+[7.128713] (-) TimerEvent: {}
+[7.229095] (-) TimerEvent: {}
+[7.329497] (-) TimerEvent: {}
+[7.429893] (-) TimerEvent: {}
+[7.530286] (-) TimerEvent: {}
+[7.630658] (-) TimerEvent: {}
+[7.731046] (-) TimerEvent: {}
+[7.831444] (-) TimerEvent: {}
+[7.931835] (-) TimerEvent: {}
+[8.032300] (-) TimerEvent: {}
+[8.132739] (-) TimerEvent: {}
+[8.233144] (-) TimerEvent: {}
+[8.333593] (-) TimerEvent: {}
+[8.434041] (-) TimerEvent: {}
+[8.476198] (distance_warning) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking CXX executable distance_listener\x1b[0m\n'}
+[8.534255] (-) TimerEvent: {}
+[8.634607] (-) TimerEvent: {}
+[8.734997] (-) TimerEvent: {}
+[8.835393] (-) TimerEvent: {}
+[8.935781] (-) TimerEvent: {}
+[8.947195] (distance_warning) StdoutLine: {'line': b'[ 98%] Built target distance_listener\n'}
+[8.949173] (distance_warning) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[8.953245] (distance_warning) CommandEnded: {'returncode': 2}
+[8.970414] (distance_warning) JobEnded: {'identifier': 'distance_warning', 'rc': 2}
+[8.981075] (-) EventReactorShutdown: {}

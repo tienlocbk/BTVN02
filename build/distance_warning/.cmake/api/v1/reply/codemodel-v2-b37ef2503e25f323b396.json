@@ -1,0 +1,303 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-f3be330ae2db5416569f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						21,
+						22,
+						23
+					]
+				},
+				{
+					"build" : "distance_warning__py",
+					"jsonFile" : "directory-distance_warning__py-93f41dded4787f4aa8fd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning/distance_warning__py",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "distance_warning__rs",
+					"jsonFile" : "directory-distance_warning__rs-e8e5e2c2a3f624113d35.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning/distance_warning__rs",
+					"targetIndexes" : 
+					[
+						20
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "distance_warning",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_distance_warning_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_distance_warning_egg-ab866ef66b21d3bb09a1.json",
+					"name" : "ament_cmake_python_build_distance_warning_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_distance_warning::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_distance_warning-8a42d02c506f63447189.json",
+					"name" : "ament_cmake_python_copy_distance_warning",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_action_client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_action_client-ed53d90f2b28d29c6719.json",
+					"name" : "distance_action_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_action_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_action_server-e1e85fe3c20df494a827.json",
+					"name" : "distance_action_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_listener::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_listener-992ad34c14501aabd2c7.json",
+					"name" : "distance_listener",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_publisher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_publisher-adb60ded98cdb8992e28.json",
+					"name" : "distance_publisher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_warning::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_warning-f8cfa70b84ea6b6425d2.json",
+					"name" : "distance_warning",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_warning__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_warning__cpp-a0a0db132f57bd3d88f1.json",
+					"name" : "distance_warning__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "distance_warning__py::@23e867045151181cc926",
+					"jsonFile" : "target-distance_warning__py-1192bffee925504735e4.json",
+					"name" : "distance_warning__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_warning__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_warning__rosidl_generator_c-ac9f3ade45ab8b6cc1b6.json",
+					"name" : "distance_warning__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_warning__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_warning__rosidl_generator_py-c6d46f6442d9c3bacf53.json",
+					"name" : "distance_warning__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_warning__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_warning__rosidl_typesupport_c-785199f4fd54dbb65235.json",
+					"name" : "distance_warning__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_warning__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_warning__rosidl_typesupport_c__pyext-98b19eced145bbeff7c8.json",
+					"name" : "distance_warning__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_warning__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_warning__rosidl_typesupport_cpp-9dca131cee23aa593215.json",
+					"name" : "distance_warning__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_warning__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_warning__rosidl_typesupport_fastrtps_c-c2ade7ba3c6ced11518d.json",
+					"name" : "distance_warning__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_warning__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_warning__rosidl_typesupport_fastrtps_c__pyext-4c41159aeabe17349658.json",
+					"name" : "distance_warning__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_warning__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_warning__rosidl_typesupport_fastrtps_cpp-d8128b9d5022f24f2d93.json",
+					"name" : "distance_warning__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_warning__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_warning__rosidl_typesupport_introspection_c-4d0bcc47ad1f92634541.json",
+					"name" : "distance_warning__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_warning__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_warning__rosidl_typesupport_introspection_c__pyext-a31aaa5bd4a4008d3d1b.json",
+					"name" : "distance_warning__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_warning__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_warning__rosidl_typesupport_introspection_cpp-66fc02e2a30eb1a72541.json",
+					"name" : "distance_warning__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "distance_warning__rs::@12802c5b70e162da6a85",
+					"jsonFile" : "target-distance_warning__rs-9d7e6b1d377ca2d5d773.json",
+					"name" : "distance_warning__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "distance_warning_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-distance_warning_uninstall-33b2acdc5a94d150322f.json",
+					"name" : "distance_warning_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "set_threshold_service::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-set_threshold_service-bf5d8a51ab6d21a44b57.json",
+					"name" : "set_threshold_service",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-5f35835b561d1412c6d5.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning",
+		"source" : "/home/loc/.distrobox/ros2-home/ros2_ws/src/distance_warning"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
