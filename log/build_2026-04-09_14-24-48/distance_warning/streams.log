@@ -1,0 +1,14 @@
+[0.019s] Invoking command in '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning -- -j32 -l32
+[0.091s] [35m[1mConsolidate compiler generated dependencies of target distance_tf_broadcaster[0m
+[0.100s] failed to create symbolic link '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/ament_cmake_python/distance_warning/distance_warning' because existing path cannot be removed: Is a directory
+[0.101s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_distance_warning.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_distance_warning] Error 1
+[0.102s] [  1%] Built target distance_warning__rs
+[0.102s] gmake[1]: *** [CMakeFiles/Makefile2:452: CMakeFiles/ament_cmake_python_symlink_distance_warning.dir/all] Error 2
+[0.102s] gmake[1]: *** Waiting for unfinished jobs....
+[0.102s] [  3%] Built target distance_warning__cpp
+[0.105s] [ 11%] Built target distance_warning__rosidl_generator_c
+[0.114s] [ 15%] Built target distance_listener
+[0.114s] [ 19%] Built target distance_publisher
+[0.129s] [ 23%] Built target distance_tf_broadcaster
+[0.131s] gmake: *** [Makefile:146: all] Error 2
+[0.135s] Invoked command in '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning -- -j32 -l32

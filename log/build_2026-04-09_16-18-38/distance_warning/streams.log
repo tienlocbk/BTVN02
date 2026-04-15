@@ -1,0 +1,249 @@
+[0.014s] Invoking command in '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning -- -j32 -l32
+[0.058s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.208s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.226s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.264s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.267s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.275s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.285s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.299s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.338s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.339s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.504s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.569s] -- Found rclcpp_action: 16.0.19 (/opt/ros/humble/share/rclcpp_action/cmake)
+[0.610s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.624s] -- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)
+[0.648s] -- Found tf2_ros: 0.25.20 (/opt/ros/humble/share/tf2_ros/cmake)
+[0.704s] -- Found tf2_geometry_msgs: 0.25.20 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.708s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.710s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.062s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.526s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.696s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.725s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.757s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.757s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.757s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.869s] [0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+[1.869s]   Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+[1.869s]   rosidl_target_interfaces()
+[1.869s] Call Stack (most recent call first):
+[1.869s]   CMakeLists.txt:34 (rosidl_target_interfaces)
+[1.869s] 
+[1.869s] [0m
+[1.870s] [0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+[1.870s]   Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+[1.870s]   rosidl_target_interfaces()
+[1.870s] Call Stack (most recent call first):
+[1.870s]   CMakeLists.txt:38 (rosidl_target_interfaces)
+[1.870s] 
+[1.870s] [0m
+[1.871s] [0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+[1.871s]   Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+[1.871s]   rosidl_target_interfaces()
+[1.871s] Call Stack (most recent call first):
+[1.871s]   CMakeLists.txt:42 (rosidl_target_interfaces)
+[1.871s] 
+[1.871s] [0m
+[1.873s] [0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+[1.873s]   Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+[1.873s]   rosidl_target_interfaces()
+[1.873s] Call Stack (most recent call first):
+[1.873s]   CMakeLists.txt:50 (rosidl_target_interfaces)
+[1.873s] 
+[1.873s] [0m
+[1.884s] -- Configuring done
+[1.976s] -- Generating done
+[2.006s] -- Build files have been written to: /home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning
+[2.049s] [35m[1mConsolidate compiler generated dependencies of target distance_warning__rosidl_generator_c[0m
+[2.049s] [35m[1mConsolidate compiler generated dependencies of target distance_listener[0m
+[2.050s] [35m[1mConsolidate compiler generated dependencies of target distance_publisher[0m
+[2.053s] [35m[1mConsolidate compiler generated dependencies of target distance_tf_broadcaster[0m
+[2.065s] [  1%] Built target distance_warning__cpp
+[2.067s] [  6%] [32mBuilding CXX object CMakeFiles/distance_listener_qos.dir/src/distance_listener_qos.cpp.o[0m
+[2.067s] [  6%] [32mBuilding CXX object CMakeFiles/distance_publisher_qos.dir/src/distance_publisher_qos.cpp.o[0m
+[2.067s] [  6%] Built target distance_warning__rs
+[2.071s] [ 13%] Built target distance_warning__rosidl_generator_c
+[2.079s] [ 13%] Built target ament_cmake_python_symlink_distance_warning
+[2.080s] [35m[1mConsolidate compiler generated dependencies of target distance_warning__rosidl_typesupport_fastrtps_cpp[0m
+[2.084s] [35m[1mConsolidate compiler generated dependencies of target distance_warning__rosidl_typesupport_introspection_cpp[0m
+[2.084s] [35m[1mConsolidate compiler generated dependencies of target distance_warning__rosidl_typesupport_cpp[0m
+[2.086s] [35m[1mConsolidate compiler generated dependencies of target distance_warning__rosidl_typesupport_introspection_c[0m
+[2.086s] [35m[1mConsolidate compiler generated dependencies of target distance_warning__rosidl_typesupport_c[0m
+[2.088s] [ 17%] Built target distance_listener
+[2.090s] [35m[1mConsolidate compiler generated dependencies of target distance_warning__rosidl_typesupport_fastrtps_c[0m
+[2.094s] [ 22%] Built target distance_tf_broadcaster
+[2.094s] [ 24%] Built target distance_publisher
+[2.108s] [ 43%] Built target distance_warning__rosidl_typesupport_fastrtps_cpp
+[2.109s] [ 44%] Built target distance_warning__rosidl_typesupport_introspection_c
+[2.109s] [ 44%] Built target distance_warning__rosidl_typesupport_c
+[2.115s] [ 51%] Built target distance_warning__rosidl_typesupport_cpp
+[2.115s] [ 58%] Built target distance_warning__rosidl_typesupport_introspection_cpp
+[2.119s] [ 65%] Built target distance_warning__rosidl_typesupport_fastrtps_c
+[2.154s] [ 65%] Built target distance_warning
+[2.175s] [35m[1mConsolidate compiler generated dependencies of target set_threshold_service[0m
+[2.176s] [35m[1mConsolidate compiler generated dependencies of target distance_action_client[0m
+[2.176s] [35m[1mConsolidate compiler generated dependencies of target distance_action_server[0m
+[2.176s] [35m[1mConsolidate compiler generated dependencies of target distance_tf_listener[0m
+[2.190s] [ 67%] Built target distance_warning__py
+[2.207s] [35m[1mConsolidate compiler generated dependencies of target distance_warning__rosidl_generator_py[0m
+[2.220s] [ 74%] Built target set_threshold_service
+[2.220s] [ 74%] Built target distance_action_client
+[2.221s] [ 77%] Built target distance_action_server
+[2.222s] [ 81%] Built target distance_tf_listener
+[2.227s] [ 86%] Built target distance_warning__rosidl_generator_py
+[2.242s] [35m[1mConsolidate compiler generated dependencies of target distance_warning__rosidl_typesupport_c__pyext[0m
+[2.246s] [35m[1mConsolidate compiler generated dependencies of target distance_warning__rosidl_typesupport_fastrtps_c__pyext[0m
+[2.246s] [35m[1mConsolidate compiler generated dependencies of target distance_warning__rosidl_typesupport_introspection_c__pyext[0m
+[2.265s] [ 89%] Built target distance_warning__rosidl_typesupport_c__pyext
+[2.269s] [ 93%] Built target distance_warning__rosidl_typesupport_fastrtps_c__pyext
+[2.270s] [ 96%] Built target distance_warning__rosidl_typesupport_introspection_c__pyext
+[2.341s] running egg_info
+[2.342s] writing distance_warning.egg-info/PKG-INFO
+[2.342s] writing dependency_links to distance_warning.egg-info/dependency_links.txt
+[2.342s] writing top-level names to distance_warning.egg-info/top_level.txt
+[2.344s] reading manifest file 'distance_warning.egg-info/SOURCES.txt'
+[2.345s] writing manifest file 'distance_warning.egg-info/SOURCES.txt'
+[2.379s] [ 96%] Built target ament_cmake_python_build_distance_warning_egg
+[6.427s] [ 98%] [32m[1mLinking CXX executable distance_publisher_qos[0m
+[6.638s] [ 98%] Built target distance_publisher_qos
+[10.277s] [100%] [32m[1mLinking CXX executable distance_listener_qos[0m
+[10.698s] [100%] Built target distance_listener_qos
+[10.717s] Invoked command in '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --build /home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning -- -j32 -l32
+[10.732s] Invoking command in '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --install /home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning
+[10.742s] -- Install configuration: ""
+[10.751s] -- Execute custom install script
+[10.751s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/ament_index/resource_index/rosidl_interfaces/distance_warning
+[10.752s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/check_distance.h
+[10.752s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__functions.h
+[10.753s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__struct.h
+[10.753s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__type_support.h
+[10.753s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/msg/rosidl_generator_c__visibility_control.h
+[10.753s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__functions.h
+[10.753s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__struct.h
+[10.753s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__type_support.h
+[10.754s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/set_threshold.h
+[10.754s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/library_path.sh
+[10.754s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/library_path.dsv
+[10.754s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__rosidl_typesupport_fastrtps_c.h
+[10.754s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[10.754s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__rosidl_typesupport_fastrtps_c.h
+[10.755s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/check_distance.hpp
+[10.755s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__builder.hpp
+[10.755s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__struct.hpp
+[10.756s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__traits.hpp
+[10.756s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__type_support.hpp
+[10.756s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/msg/rosidl_generator_cpp__visibility_control.hpp
+[10.756s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__builder.hpp
+[10.756s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__struct.hpp
+[10.756s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__traits.hpp
+[10.757s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__type_support.hpp
+[10.757s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/set_threshold.hpp
+[10.757s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__rosidl_typesupport_fastrtps_cpp.hpp
+[10.757s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[10.758s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__rosidl_typesupport_fastrtps_cpp.hpp
+[10.758s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__rosidl_typesupport_introspection_c.h
+[10.758s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[10.758s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__rosidl_typesupport_introspection_c.h
+[10.759s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__rosidl_typesupport_introspection_cpp.hpp
+[10.759s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__rosidl_typesupport_introspection_cpp.hpp
+[10.759s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/pythonpath.sh
+[10.759s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/pythonpath.dsv
+[10.760s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning-0.0.0-py3.10.egg-info/PKG-INFO
+[10.760s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning-0.0.0-py3.10.egg-info/SOURCES.txt
+[10.760s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning-0.0.0-py3.10.egg-info/dependency_links.txt
+[10.760s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning-0.0.0-py3.10.egg-info/top_level.txt
+[10.761s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/__init__.py
+[10.761s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/_distance_warning_s.ep.rosidl_typesupport_c.c
+[10.761s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/_distance_warning_s.ep.rosidl_typesupport_fastrtps_c.c
+[10.762s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/_distance_warning_s.ep.rosidl_typesupport_introspection_c.c
+[10.762s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/action/__init__.py
+[10.762s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/action/_check_distance.py
+[10.762s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/action/_check_distance_s.c
+[10.762s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/distance_warning_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[10.762s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/distance_warning_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[10.763s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/distance_warning_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[10.763s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/libdistance_warning__rosidl_generator_py.so
+[10.763s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/srv/__init__.py
+[10.763s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/srv/_set_threshold.py
+[10.763s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/srv/_set_threshold_s.c
+[10.763s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/distance_warning_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[10.763s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/distance_warning_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[10.764s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/distance_warning_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[10.764s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/ament_index/resource_index/rust_packages/distance_warning
+[10.765s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/rust/Cargo.toml
+[10.765s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/rust/build.rs
+[10.765s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/rust/src/action.rs
+[10.765s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/rust/src/action/rmw.rs
+[10.765s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/rust/src/lib.rs
+[10.765s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/rust/src/srv.rs
+[10.766s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/rust/src/srv/rmw.rs
+[10.766s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/srv/SetThreshold.idl
+[10.766s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/action/CheckDistance.idl
+[10.766s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/srv/SetThreshold.srv
+[10.766s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/srv/SetThreshold_Request.msg
+[10.766s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/srv/SetThreshold_Response.msg
+[10.767s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/action/CheckDistance.action
+[10.767s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/distance_warning/distance_listener
+[10.767s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/distance_warning/distance_publisher
+[10.767s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/distance_warning/set_threshold_service
+[10.768s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/distance_warning/distance_action_server
+[10.768s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/distance_warning/distance_action_client
+[10.768s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/distance_warning/distance_tf_broadcaster
+[10.768s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/distance_warning/distance_tf_listener
+[10.768s] -- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/distance_warning/distance_publisher_qos
+[10.781s] -- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/distance_warning/distance_listener_qos
+[10.794s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/launch/ distance_warning_full.launch.py
+[10.794s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/launch/distance_warning.launch.py
+[10.794s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/ament_index/resource_index/package_run_dependencies/distance_warning
+[10.794s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/ament_index/resource_index/parent_prefix_path/distance_warning
+[10.794s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/ament_prefix_path.sh
+[10.794s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/ament_prefix_path.dsv
+[10.795s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/path.sh
+[10.795s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/path.dsv
+[10.795s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/local_setup.bash
+[10.795s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/local_setup.sh
+[10.795s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/local_setup.zsh
+[10.795s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/local_setup.dsv
+[10.796s] -- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/package.dsv
+[10.810s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/ament_index/resource_index/packages/distance_warning
+[10.810s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/rosidl_cmake-extras.cmake
+[10.810s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/ament_cmake_export_dependencies-extras.cmake
+[10.811s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/ament_cmake_export_include_directories-extras.cmake
+[10.811s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/ament_cmake_export_libraries-extras.cmake
+[10.811s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/ament_cmake_export_targets-extras.cmake
+[10.811s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[10.811s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[10.811s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warningConfig.cmake
+[10.811s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warningConfig-version.cmake
+[10.811s] -- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/package.xml
+[10.812s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_generator_c.so
+[10.812s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_fastrtps_c.so
+[10.812s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_fastrtps_cpp.so
+[10.812s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_introspection_c.so
+[10.813s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_c.so
+[10.813s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_introspection_cpp.so
+[10.813s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_cpp.so
+[10.854s] Listing '/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning'...
+[10.854s] Compiling '/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/__init__.py'...
+[10.854s] Listing '/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/action'...
+[10.854s] Listing '/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/srv'...
+[10.859s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_generator_py.so
+[10.860s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_generator_cExport.cmake
+[10.860s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_generator_cExport-noconfig.cmake
+[10.860s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_typesupport_fastrtps_cExport.cmake
+[10.861s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[10.861s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_generator_cppExport.cmake
+[10.861s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_typesupport_fastrtps_cppExport.cmake
+[10.861s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[10.861s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_introspection_cExport.cmake
+[10.861s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[10.861s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_cExport.cmake
+[10.862s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_cExport-noconfig.cmake
+[10.862s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_introspection_cppExport.cmake
+[10.862s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[10.862s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_cppExport.cmake
+[10.863s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_cppExport-noconfig.cmake
+[10.864s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_generator_pyExport.cmake
+[10.865s] -- Up-to-date: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_generator_pyExport-noconfig.cmake
+[10.866s] Invoked command in '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake --install /home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning

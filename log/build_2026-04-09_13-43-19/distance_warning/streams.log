@@ -1,0 +1,73 @@
+[0.012s] Invoking command in '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning': CMAKE_PREFIX_PATH=/opt/ros/humble PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake /home/loc/.distrobox/ros2-home/BTVN02/src/distance_warning -DCMAKE_INSTALL_PREFIX=/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning
+[0.037s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.196s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.215s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.255s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.258s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.266s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.278s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.292s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.330s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.332s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.472s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.533s] -- Found rclcpp_action: 16.0.19 (/opt/ros/humble/share/rclcpp_action/cmake)
+[0.569s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.579s] -- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)
+[0.598s] -- Found tf2_ros: 0.25.20 (/opt/ros/humble/share/tf2_ros/cmake)
+[0.652s] -- Found tf2_geometry_msgs: 0.25.20 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.656s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.658s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.994s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.407s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.568s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.597s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.627s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.628s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.628s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.740s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.754s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.754s] -- Configured cppcheck include dirs: 
+[1.755s] -- Configured cppcheck exclude dirs and/or files: 
+[1.755s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.756s] -- Added test 'lint_cmake' to check CMake code style
+[1.756s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.757s] -- Added test 'uncrustify' to check C / C++ code style
+[1.757s] -- Configured uncrustify additional arguments: 
+[1.758s] -- Added test 'xmllint' to check XML markup files
+[1.763s] [0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+[1.764s]   Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+[1.764s]   rosidl_target_interfaces()
+[1.764s] Call Stack (most recent call first):
+[1.764s]   CMakeLists.txt:53 (rosidl_target_interfaces)
+[1.764s] 
+[1.764s] [0m
+[1.764s] [0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+[1.764s]   Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+[1.764s]   rosidl_target_interfaces()
+[1.765s] Call Stack (most recent call first):
+[1.765s]   CMakeLists.txt:59 (rosidl_target_interfaces)
+[1.765s] 
+[1.765s] [0m
+[1.765s] [0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+[1.765s]   Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+[1.765s]   rosidl_target_interfaces()
+[1.766s] Call Stack (most recent call first):
+[1.766s]   CMakeLists.txt:65 (rosidl_target_interfaces)
+[1.766s] 
+[1.766s] [0m
+[1.767s] -- Configuring done
+[1.777s] [31mCMake Error at CMakeLists.txt:69 (add_executable):
+[1.777s]   Cannot find source file:
+[1.777s] 
+[1.777s]     src/tf2_broadcaster.cpp
+[1.777s] 
+[1.777s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[1.778s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[1.778s] 
+[1.778s] [0m
+[1.781s] [31mCMake Error at CMakeLists.txt:69 (add_executable):
+[1.781s]   No SOURCES given to target: tf2_broadcaster
+[1.781s] 
+[1.781s] [0m
+[1.781s] [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+[1.792s] Invoked command in '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ /usr/bin/cmake /home/loc/.distrobox/ros2-home/BTVN02/src/distance_warning -DCMAKE_INSTALL_PREFIX=/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning

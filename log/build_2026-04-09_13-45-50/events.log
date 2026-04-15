@@ -1,0 +1,198 @@
+[0.000000] (-) TimerEvent: {}
+[0.000272] (distance_warning) JobQueued: {'identifier': 'distance_warning', 'dependencies': OrderedDict()}
+[0.000355] (distance_warning) JobStarted: {'identifier': 'distance_warning'}
+[0.009869] (distance_warning) JobProgress: {'identifier': 'distance_warning', 'progress': 'cmake'}
+[0.011266] (distance_warning) Command: {'cmd': ['/usr/bin/cmake', '/home/loc/.distrobox/ros2-home/BTVN02/src/distance_warning', '-DCMAKE_INSTALL_PREFIX=/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning'], 'cwd': '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/loc'), ('USER', 'loc'), ('HOSTNAME', 'fedora'), ('GIT_ASKPASS', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/bin/helpers/browser.sh'), ('HOME', '/home/loc/.distrobox/ros2-home'), ('TERM_PROGRAM_VERSION', '1.114.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-4451067f-0d08-4a6b-9eba-c62e39f9fbec.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass-main.js'), ('PS1', '\\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$'), ('VSCODE_GIT_ASKPASS_NODE', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('COLORTERM', 'truecolor'), ('container', 'podman'), ('REMOTE_CONTAINERS', 'true'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-829ca063-515e-4200-b040-d62807eb97ca.sock'), ('LOGNAME', 'loc'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERMINFO_DIRS', '/usr/share/terminfo:/run/host/usr/share/terminfo'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/loc/.distrobox/ros2-home/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISTROBOX_HOST_HOME', '/home/loc'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-829ca063-515e-4200-b040-d62807eb97ca.sock","/tmp/.X11-unix/X7","/home/loc/.distrobox/ros2-home/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':7'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/0/vscode-git-6b5aefb591.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-829ca063-515e-4200-b040-d62807eb97ca.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X7'), ('SHELL', 'bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning'), ('CONTAINER_ID', 'ros2'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.036182] (distance_warning) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099113] (-) TimerEvent: {}
+[0.199709] (-) TimerEvent: {}
+[0.210805] (distance_warning) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.229294] (distance_warning) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.272444] (distance_warning) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.276253] (distance_warning) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.285109] (distance_warning) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.299057] (distance_warning) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.299795] (-) TimerEvent: {}
+[0.317175] (distance_warning) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.355406] (distance_warning) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.357012] (distance_warning) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.400080] (-) TimerEvent: {}
+[0.500711] (-) TimerEvent: {}
+[0.522610] (distance_warning) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.600951] (-) TimerEvent: {}
+[0.607686] (distance_warning) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.19 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[0.648537] (distance_warning) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.659276] (distance_warning) StdoutLine: {'line': b'-- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)\n'}
+[0.677831] (distance_warning) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.20 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[0.701179] (-) TimerEvent: {}
+[0.732278] (distance_warning) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.20 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[0.735985] (distance_warning) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[0.737628] (distance_warning) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[0.801375] (-) TimerEvent: {}
+[0.901913] (-) TimerEvent: {}
+[1.002479] (-) TimerEvent: {}
+[1.063462] (distance_warning) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.102696] (-) TimerEvent: {}
+[1.203217] (-) TimerEvent: {}
+[1.303698] (-) TimerEvent: {}
+[1.404212] (-) TimerEvent: {}
+[1.480881] (distance_warning) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.504438] (-) TimerEvent: {}
+[1.604961] (-) TimerEvent: {}
+[1.648659] (distance_warning) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.682256] (distance_warning) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.705184] (-) TimerEvent: {}
+[1.711710] (distance_warning) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.712033] (distance_warning) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.712207] (distance_warning) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.805304] (-) TimerEvent: {}
+[1.817327] (distance_warning) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.831605] (distance_warning) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.832515] (distance_warning) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.832837] (distance_warning) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.833172] (distance_warning) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.833482] (distance_warning) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.834012] (distance_warning) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.835378] (distance_warning) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.835750] (distance_warning) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.835907] (distance_warning) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.842059] (distance_warning) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):\n'}
+[1.842430] (distance_warning) StderrLine: {'line': b'  Use rosidl_get_typesupport_target() and target_link_libraries() instead of\n'}
+[1.842600] (distance_warning) StderrLine: {'line': b'  rosidl_target_interfaces()\n'}
+[1.842739] (distance_warning) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.842872] (distance_warning) StderrLine: {'line': b'  CMakeLists.txt:53 (rosidl_target_interfaces)\n'}
+[1.843083] (distance_warning) StderrLine: {'line': b'\n'}
+[1.843230] (distance_warning) StderrLine: {'line': b'\x1b[0m\n'}
+[1.843365] (distance_warning) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):\n'}
+[1.843497] (distance_warning) StderrLine: {'line': b'  Use rosidl_get_typesupport_target() and target_link_libraries() instead of\n'}
+[1.843628] (distance_warning) StderrLine: {'line': b'  rosidl_target_interfaces()\n'}
+[1.843759] (distance_warning) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.843959] (distance_warning) StderrLine: {'line': b'  CMakeLists.txt:59 (rosidl_target_interfaces)\n'}
+[1.844103] (distance_warning) StderrLine: {'line': b'\n'}
+[1.844293] (distance_warning) StderrLine: {'line': b'\x1b[0m\n'}
+[1.844579] (distance_warning) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):\n'}
+[1.844663] (distance_warning) StderrLine: {'line': b'  Use rosidl_get_typesupport_target() and target_link_libraries() instead of\n'}
+[1.844730] (distance_warning) StderrLine: {'line': b'  rosidl_target_interfaces()\n'}
+[1.844795] (distance_warning) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.844859] (distance_warning) StderrLine: {'line': b'  CMakeLists.txt:65 (rosidl_target_interfaces)\n'}
+[1.844920] (distance_warning) StderrLine: {'line': b'\n'}
+[1.844982] (distance_warning) StderrLine: {'line': b'\x1b[0m\n'}
+[1.846825] (distance_warning) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.905509] (-) TimerEvent: {}
+[1.927259] (distance_warning) StdoutLine: {'line': b'-- Generating done\n'}
+[1.959090] (distance_warning) StdoutLine: {'line': b'-- Build files have been written to: /home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning\n'}
+[1.972527] (distance_warning) CommandEnded: {'returncode': 0}
+[1.973515] (distance_warning) JobProgress: {'identifier': 'distance_warning', 'progress': 'build'}
+[1.975664] (distance_warning) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning', '--', '-j32', '-l32'], 'cwd': '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/loc'), ('USER', 'loc'), ('HOSTNAME', 'fedora'), ('GIT_ASKPASS', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/bin/helpers/browser.sh'), ('HOME', '/home/loc/.distrobox/ros2-home'), ('TERM_PROGRAM_VERSION', '1.114.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-4451067f-0d08-4a6b-9eba-c62e39f9fbec.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass-main.js'), ('PS1', '\\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$'), ('VSCODE_GIT_ASKPASS_NODE', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('COLORTERM', 'truecolor'), ('container', 'podman'), ('REMOTE_CONTAINERS', 'true'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-829ca063-515e-4200-b040-d62807eb97ca.sock'), ('LOGNAME', 'loc'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERMINFO_DIRS', '/usr/share/terminfo:/run/host/usr/share/terminfo'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/loc/.distrobox/ros2-home/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISTROBOX_HOST_HOME', '/home/loc'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-829ca063-515e-4200-b040-d62807eb97ca.sock","/tmp/.X11-unix/X7","/home/loc/.distrobox/ros2-home/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':7'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/0/vscode-git-6b5aefb591.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-829ca063-515e-4200-b040-d62807eb97ca.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X7'), ('SHELL', 'bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning'), ('CONTAINER_ID', 'ros2'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[2.005728] (-) TimerEvent: {}
+[2.041847] (distance_warning) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target distance_listener\x1b[0m\n'}
+[2.042246] (distance_warning) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target distance_warning__rosidl_generator_c\x1b[0m\n'}
+[2.042857] (distance_warning) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target distance_publisher\x1b[0m\n'}
+[2.055548] (distance_warning) StdoutLine: {'line': b'[  1%] \x1b[32mBuilding CXX object CMakeFiles/distance_tf_broadcaster.dir/src/distance_tf_broadcaster.cpp.o\x1b[0m\n'}
+[2.056819] (distance_warning) StdoutLine: {'line': b'[  3%] Built target distance_warning__rs\n'}
+[2.057073] (distance_warning) StdoutLine: {'line': b'[  5%] Built target distance_warning__cpp\n'}
+[2.057421] (distance_warning) StderrLine: {'line': b"failed to create symbolic link '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/ament_cmake_python/distance_warning/distance_warning' because existing path cannot be removed: Is a directory\n"}
+[2.059140] (distance_warning) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_distance_warning.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_distance_warning] Error 1\n'}
+[2.059588] (distance_warning) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:452: CMakeFiles/ament_cmake_python_symlink_distance_warning.dir/all] Error 2\n'}
+[2.059787] (distance_warning) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[2.061911] (distance_warning) StdoutLine: {'line': b'[ 13%] Built target distance_warning__rosidl_generator_c\n'}
+[2.073953] (distance_warning) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target distance_warning__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[2.074565] (distance_warning) StdoutLine: {'line': b'[ 15%] \x1b[32m\x1b[1mLinking CXX executable distance_listener\x1b[0m\n'}
+[2.081554] (distance_warning) StdoutLine: {'line': b'[ 17%] \x1b[32m\x1b[1mLinking CXX executable distance_publisher\x1b[0m\n'}
+[2.099551] (distance_warning) StdoutLine: {'line': b'[ 25%] Built target distance_warning__rosidl_typesupport_fastrtps_cpp\n'}
+[2.105882] (-) TimerEvent: {}
+[2.206325] (-) TimerEvent: {}
+[2.306911] (-) TimerEvent: {}
+[2.319226] (distance_warning) StdoutLine: {'line': b'[ 26%] Built target distance_publisher\n'}
+[2.407139] (-) TimerEvent: {}
+[2.507735] (-) TimerEvent: {}
+[2.537744] (distance_warning) StdoutLine: {'line': b'[ 28%] Built target distance_listener\n'}
+[2.607980] (-) TimerEvent: {}
+[2.708512] (-) TimerEvent: {}
+[2.809100] (-) TimerEvent: {}
+[2.909698] (-) TimerEvent: {}
+[3.010330] (-) TimerEvent: {}
+[3.110807] (-) TimerEvent: {}
+[3.211252] (-) TimerEvent: {}
+[3.311721] (-) TimerEvent: {}
+[3.412217] (-) TimerEvent: {}
+[3.512632] (-) TimerEvent: {}
+[3.613035] (-) TimerEvent: {}
+[3.713468] (-) TimerEvent: {}
+[3.813799] (-) TimerEvent: {}
+[3.914207] (-) TimerEvent: {}
+[4.014544] (-) TimerEvent: {}
+[4.114960] (-) TimerEvent: {}
+[4.215387] (-) TimerEvent: {}
+[4.315833] (-) TimerEvent: {}
+[4.416264] (-) TimerEvent: {}
+[4.516678] (-) TimerEvent: {}
+[4.617015] (-) TimerEvent: {}
+[4.717355] (-) TimerEvent: {}
+[4.817801] (-) TimerEvent: {}
+[4.918245] (-) TimerEvent: {}
+[5.018683] (-) TimerEvent: {}
+[5.119073] (-) TimerEvent: {}
+[5.219522] (-) TimerEvent: {}
+[5.319932] (-) TimerEvent: {}
+[5.420324] (-) TimerEvent: {}
+[5.520640] (-) TimerEvent: {}
+[5.621024] (-) TimerEvent: {}
+[5.721512] (-) TimerEvent: {}
+[5.821993] (-) TimerEvent: {}
+[5.922497] (-) TimerEvent: {}
+[6.023002] (-) TimerEvent: {}
+[6.123502] (-) TimerEvent: {}
+[6.224020] (-) TimerEvent: {}
+[6.324707] (-) TimerEvent: {}
+[6.425112] (-) TimerEvent: {}
+[6.525515] (-) TimerEvent: {}
+[6.625935] (-) TimerEvent: {}
+[6.726334] (-) TimerEvent: {}
+[6.826678] (-) TimerEvent: {}
+[6.926978] (-) TimerEvent: {}
+[7.027350] (-) TimerEvent: {}
+[7.127723] (-) TimerEvent: {}
+[7.228093] (-) TimerEvent: {}
+[7.328493] (-) TimerEvent: {}
+[7.428870] (-) TimerEvent: {}
+[7.529255] (-) TimerEvent: {}
+[7.629595] (-) TimerEvent: {}
+[7.729990] (-) TimerEvent: {}
+[7.830346] (-) TimerEvent: {}
+[7.930737] (-) TimerEvent: {}
+[8.031124] (-) TimerEvent: {}
+[8.131707] (-) TimerEvent: {}
+[8.232100] (-) TimerEvent: {}
+[8.332537] (-) TimerEvent: {}
+[8.432858] (-) TimerEvent: {}
+[8.533179] (-) TimerEvent: {}
+[8.633458] (-) TimerEvent: {}
+[8.733818] (-) TimerEvent: {}
+[8.834215] (-) TimerEvent: {}
+[8.934509] (-) TimerEvent: {}
+[9.034904] (-) TimerEvent: {}
+[9.135284] (-) TimerEvent: {}
+[9.235672] (-) TimerEvent: {}
+[9.336093] (-) TimerEvent: {}
+[9.436494] (-) TimerEvent: {}
+[9.536870] (-) TimerEvent: {}
+[9.637232] (-) TimerEvent: {}
+[9.737612] (-) TimerEvent: {}
+[9.837997] (-) TimerEvent: {}
+[9.938394] (-) TimerEvent: {}
+[10.038818] (-) TimerEvent: {}
+[10.139208] (-) TimerEvent: {}
+[10.239514] (-) TimerEvent: {}
+[10.339926] (-) TimerEvent: {}
+[10.347057] (distance_warning) StdoutLine: {'line': b'[ 30%] \x1b[32m\x1b[1mLinking CXX executable distance_tf_broadcaster\x1b[0m\n'}
+[10.440118] (-) TimerEvent: {}
+[10.540527] (-) TimerEvent: {}
+[10.640913] (-) TimerEvent: {}
+[10.741348] (-) TimerEvent: {}
+[10.841783] (-) TimerEvent: {}
+[10.843085] (distance_warning) StdoutLine: {'line': b'[ 30%] Built target distance_tf_broadcaster\n'}
+[10.844786] (distance_warning) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[10.848018] (distance_warning) CommandEnded: {'returncode': 2}
+[10.864673] (distance_warning) JobEnded: {'identifier': 'distance_warning', 'rc': 2}
+[10.875222] (-) EventReactorShutdown: {}

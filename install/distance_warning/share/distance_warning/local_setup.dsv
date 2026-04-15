@@ -1,4 +1,1 @@
-source;share/distance_warning/environment/ament_prefix_path.sh
-source;share/distance_warning/environment/library_path.sh
-source;share/distance_warning/environment/path.sh
-source;share/distance_warning/environment/pythonpath.sh
+/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/ament_cmake_environment_hooks/local_setup.dsv

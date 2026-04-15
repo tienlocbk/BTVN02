@@ -1,10 +1,10 @@
 {
   "package_name": "distance_warning",
-  "output_dir": "/home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning/rosidl_generator_py/distance_warning",
+  "output_dir": "/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/rosidl_generator_py/distance_warning",
   "template_dir": "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource",
   "idl_tuples": [
-    "/home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning/rosidl_adapter/distance_warning:srv/SetThreshold.idl",
-    "/home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning/rosidl_adapter/distance_warning:action/CheckDistance.idl"
+    "/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/rosidl_adapter/distance_warning:srv/SetThreshold.idl",
+    "/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/rosidl_adapter/distance_warning:action/CheckDistance.idl"
   ],
   "ros_interface_dependencies": [
     "action_msgs:/opt/ros/humble/share/action_msgs/msg/GoalInfo.idl",
@@ -29,8 +29,8 @@
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
     "/opt/ros/humble/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
-    "/home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning/rosidl_adapter/distance_warning/srv/SetThreshold.idl",
-    "/home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning/rosidl_adapter/distance_warning/action/CheckDistance.idl",
+    "/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/rosidl_adapter/distance_warning/srv/SetThreshold.idl",
+    "/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/rosidl_adapter/distance_warning/action/CheckDistance.idl",
     "/opt/ros/humble/share/action_msgs/msg/GoalInfo.idl",
     "/opt/ros/humble/share/action_msgs/msg/GoalStatus.idl",
     "/opt/ros/humble/share/action_msgs/msg/GoalStatusArray.idl",

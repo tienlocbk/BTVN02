@@ -1,0 +1,444 @@
+[0.000000] (-) TimerEvent: {}
+[0.000883] (distance_warning) JobQueued: {'identifier': 'distance_warning', 'dependencies': OrderedDict()}
+[0.000975] (distance_warning) JobStarted: {'identifier': 'distance_warning'}
+[0.010246] (distance_warning) JobProgress: {'identifier': 'distance_warning', 'progress': 'cmake'}
+[0.010915] (distance_warning) Command: {'cmd': ['/usr/bin/cmake', '/home/loc/.distrobox/ros2-home/BTVN02/src/distance_warning', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning'], 'cwd': '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/loc'), ('USER', 'loc'), ('HOSTNAME', 'fedora'), ('GIT_ASKPASS', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/bin/helpers/browser.sh'), ('HOME', '/home/loc/.distrobox/ros2-home'), ('TERM_PROGRAM_VERSION', '1.114.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-c3ea7386-154b-4c5e-9496-5066aeed6884.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass-main.js'), ('PS1', '\\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$'), ('VSCODE_GIT_ASKPASS_NODE', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('COLORTERM', 'truecolor'), ('container', 'podman'), ('REMOTE_CONTAINERS', 'true'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-829ca063-515e-4200-b040-d62807eb97ca.sock'), ('LOGNAME', 'loc'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERMINFO_DIRS', '/usr/share/terminfo:/run/host/usr/share/terminfo'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/loc/.distrobox/ros2-home/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISTROBOX_HOST_HOME', '/home/loc'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-829ca063-515e-4200-b040-d62807eb97ca.sock","/tmp/.X11-unix/X7","/home/loc/.distrobox/ros2-home/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':7'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/0/vscode-git-6b5aefb591.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-829ca063-515e-4200-b040-d62807eb97ca.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X7'), ('SHELL', 'bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning'), ('CONTAINER_ID', 'ros2'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.096376] (distance_warning) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099511] (-) TimerEvent: {}
+[0.185723] (distance_warning) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.197933] (distance_warning) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199631] (-) TimerEvent: {}
+[0.300043] (-) TimerEvent: {}
+[0.312242] (distance_warning) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.324306] (distance_warning) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.324784] (distance_warning) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.325475] (distance_warning) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.331006] (distance_warning) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.400223] (-) TimerEvent: {}
+[0.459095] (distance_warning) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.473017] (distance_warning) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.473504] (distance_warning) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.474189] (distance_warning) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.477244] (distance_warning) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.500405] (-) TimerEvent: {}
+[0.600904] (-) TimerEvent: {}
+[0.684299] (distance_warning) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.701138] (-) TimerEvent: {}
+[0.761722] (distance_warning) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.793742] (distance_warning) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.801369] (-) TimerEvent: {}
+[0.836495] (distance_warning) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.841141] (distance_warning) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.849541] (distance_warning) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.861773] (distance_warning) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.877694] (distance_warning) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.901502] (-) TimerEvent: {}
+[0.920362] (distance_warning) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.922624] (distance_warning) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.001684] (-) TimerEvent: {}
+[1.051046] (distance_warning) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.092066] (distance_warning) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.101853] (-) TimerEvent: {}
+[1.153758] (distance_warning) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.161370] (distance_warning) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.202042] (-) TimerEvent: {}
+[1.266063] (distance_warning) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.267106] (distance_warning) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.302299] (-) TimerEvent: {}
+[1.376323] (distance_warning) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.378552] (distance_warning) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.402496] (-) TimerEvent: {}
+[1.440580] (distance_warning) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.19 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[1.477668] (distance_warning) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.490820] (distance_warning) StdoutLine: {'line': b'-- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)\n'}
+[1.502740] (-) TimerEvent: {}
+[1.518926] (distance_warning) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.20 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[1.579020] (distance_warning) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.20 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[1.593283] (distance_warning) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.594934] (distance_warning) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.595090] (distance_warning) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.602899] (-) TimerEvent: {}
+[1.703253] (-) TimerEvent: {}
+[1.803582] (-) TimerEvent: {}
+[1.903957] (-) TimerEvent: {}
+[1.924763] (distance_warning) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[2.004162] (-) TimerEvent: {}
+[2.104494] (-) TimerEvent: {}
+[2.204831] (-) TimerEvent: {}
+[2.305309] (-) TimerEvent: {}
+[2.357516] (distance_warning) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.405392] (-) TimerEvent: {}
+[2.505687] (-) TimerEvent: {}
+[2.514689] (distance_warning) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.545268] (distance_warning) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[2.546261] (distance_warning) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[2.575828] (distance_warning) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[2.576025] (distance_warning) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.576106] (distance_warning) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[2.576212] (distance_warning) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[2.603004] (distance_warning) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[2.605841] (-) TimerEvent: {}
+[2.706221] (-) TimerEvent: {}
+[2.735130] (distance_warning) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):\n'}
+[2.735407] (distance_warning) StderrLine: {'line': b'  Use rosidl_get_typesupport_target() and target_link_libraries() instead of\n'}
+[2.735506] (distance_warning) StderrLine: {'line': b'  rosidl_target_interfaces()\n'}
+[2.735577] (distance_warning) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.735649] (distance_warning) StderrLine: {'line': b'  CMakeLists.txt:34 (rosidl_target_interfaces)\n'}
+[2.735721] (distance_warning) StderrLine: {'line': b'\n'}
+[2.735790] (distance_warning) StderrLine: {'line': b'\x1b[0m\n'}
+[2.736096] (distance_warning) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):\n'}
+[2.736314] (distance_warning) StderrLine: {'line': b'  Use rosidl_get_typesupport_target() and target_link_libraries() instead of\n'}
+[2.736401] (distance_warning) StderrLine: {'line': b'  rosidl_target_interfaces()\n'}
+[2.736476] (distance_warning) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.736544] (distance_warning) StderrLine: {'line': b'  CMakeLists.txt:38 (rosidl_target_interfaces)\n'}
+[2.736610] (distance_warning) StderrLine: {'line': b'\n'}
+[2.736677] (distance_warning) StderrLine: {'line': b'\x1b[0m\n'}
+[2.737053] (distance_warning) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):\n'}
+[2.737135] (distance_warning) StderrLine: {'line': b'  Use rosidl_get_typesupport_target() and target_link_libraries() instead of\n'}
+[2.737201] (distance_warning) StderrLine: {'line': b'  rosidl_target_interfaces()\n'}
+[2.737278] (distance_warning) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.737349] (distance_warning) StderrLine: {'line': b'  CMakeLists.txt:42 (rosidl_target_interfaces)\n'}
+[2.737412] (distance_warning) StderrLine: {'line': b'\n'}
+[2.737474] (distance_warning) StderrLine: {'line': b'\x1b[0m\n'}
+[2.762967] (distance_warning) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.806305] (-) TimerEvent: {}
+[2.837451] (distance_warning) StdoutLine: {'line': b'-- Generating done\n'}
+[2.862608] (distance_warning) StdoutLine: {'line': b'-- Build files have been written to: /home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning\n'}
+[2.879966] (distance_warning) CommandEnded: {'returncode': 0}
+[2.880423] (distance_warning) JobProgress: {'identifier': 'distance_warning', 'progress': 'build'}
+[2.880455] (distance_warning) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning', '--', '-j32', '-l32'], 'cwd': '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/loc'), ('USER', 'loc'), ('HOSTNAME', 'fedora'), ('GIT_ASKPASS', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/bin/helpers/browser.sh'), ('HOME', '/home/loc/.distrobox/ros2-home'), ('TERM_PROGRAM_VERSION', '1.114.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-c3ea7386-154b-4c5e-9496-5066aeed6884.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass-main.js'), ('PS1', '\\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$'), ('VSCODE_GIT_ASKPASS_NODE', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('COLORTERM', 'truecolor'), ('container', 'podman'), ('REMOTE_CONTAINERS', 'true'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-829ca063-515e-4200-b040-d62807eb97ca.sock'), ('LOGNAME', 'loc'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERMINFO_DIRS', '/usr/share/terminfo:/run/host/usr/share/terminfo'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/loc/.distrobox/ros2-home/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISTROBOX_HOST_HOME', '/home/loc'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-829ca063-515e-4200-b040-d62807eb97ca.sock","/tmp/.X11-unix/X7","/home/loc/.distrobox/ros2-home/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':7'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/0/vscode-git-6b5aefb591.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-829ca063-515e-4200-b040-d62807eb97ca.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X7'), ('SHELL', 'bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning'), ('CONTAINER_ID', 'ros2'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[2.906500] (-) TimerEvent: {}
+[2.953204] (distance_warning) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.970290] (distance_warning) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding CXX object CMakeFiles/distance_listener.dir/src/distance_listener.cpp.o\x1b[0m\n'}
+[2.970588] (distance_warning) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[2.971103] (distance_warning) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.971435] (distance_warning) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object CMakeFiles/distance_publisher.dir/src/distance_publisher.cpp.o\x1b[0m\n'}
+[2.972459] (distance_warning) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/distance_tf_broadcaster.dir/src/distance_tf_broadcaster.cpp.o\x1b[0m\n'}
+[2.985949] (distance_warning) StdoutLine: {'line': b'[ 11%] Built target ament_cmake_python_symlink_distance_warning\n'}
+[3.006700] (-) TimerEvent: {}
+[3.107034] (-) TimerEvent: {}
+[3.207453] (-) TimerEvent: {}
+[3.238648] (distance_warning) StdoutLine: {'line': b'running egg_info\n'}
+[3.239209] (distance_warning) StdoutLine: {'line': b'creating distance_warning.egg-info\n'}
+[3.239483] (distance_warning) StdoutLine: {'line': b'writing distance_warning.egg-info/PKG-INFO\n'}
+[3.239719] (distance_warning) StdoutLine: {'line': b'writing dependency_links to distance_warning.egg-info/dependency_links.txt\n'}
+[3.239932] (distance_warning) StdoutLine: {'line': b'writing top-level names to distance_warning.egg-info/top_level.txt\n'}
+[3.240094] (distance_warning) StdoutLine: {'line': b"writing manifest file 'distance_warning.egg-info/SOURCES.txt'\n"}
+[3.241872] (distance_warning) StdoutLine: {'line': b"reading manifest file 'distance_warning.egg-info/SOURCES.txt'\n"}
+[3.242403] (distance_warning) StdoutLine: {'line': b"writing manifest file 'distance_warning.egg-info/SOURCES.txt'\n"}
+[3.277638] (distance_warning) StdoutLine: {'line': b'[ 11%] Built target ament_cmake_python_build_distance_warning_egg\n'}
+[3.307579] (-) TimerEvent: {}
+[3.359617] (distance_warning) StdoutLine: {'line': b'[ 11%] Built target distance_warning__rs\n'}
+[3.407806] (-) TimerEvent: {}
+[3.508341] (-) TimerEvent: {}
+[3.566077] (distance_warning) StdoutLine: {'line': b'[ 11%] Built target distance_warning__cpp\n'}
+[3.576284] (distance_warning) StdoutLine: {'line': b'[ 13%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.576814] (distance_warning) StdoutLine: {'line': b'[ 15%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.577033] (distance_warning) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[3.608306] (distance_warning) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding C object CMakeFiles/distance_warning__rosidl_generator_c.dir/rosidl_generator_c/distance_warning/action/detail/check_distance__functions.c.o\x1b[0m\n'}
+[3.608658] (-) TimerEvent: {}
+[3.611609] (distance_warning) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/distance_warning__rosidl_generator_c.dir/rosidl_generator_c/distance_warning/srv/detail/set_threshold__functions.c.o\x1b[0m\n'}
+[3.708913] (-) TimerEvent: {}
+[3.785169] (distance_warning) StdoutLine: {'line': b'[ 23%] \x1b[32m\x1b[1mLinking C shared library libdistance_warning__rosidl_generator_c.so\x1b[0m\n'}
+[3.809159] (-) TimerEvent: {}
+[3.855965] (distance_warning) StdoutLine: {'line': b'[ 23%] Built target distance_warning__rosidl_generator_c\n'}
+[3.875151] (distance_warning) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[3.875394] (distance_warning) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.875466] (distance_warning) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.909374] (-) TimerEvent: {}
+[3.984225] (distance_warning) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/distance_warning__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/distance_warning/action/check_distance__type_support.cpp.o\x1b[0m\n'}
+[3.984613] (distance_warning) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/distance_warning__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/distance_warning/srv/set_threshold__type_support.cpp.o\x1b[0m\n'}
+[4.009583] (-) TimerEvent: {}
+[4.041602] (distance_warning) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/distance_warning__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/distance_warning/srv/detail/set_threshold__type_support.cpp.o\x1b[0m\n'}
+[4.047414] (distance_warning) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/distance_warning__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/distance_warning/action/detail/check_distance__type_support.cpp.o\x1b[0m\n'}
+[4.080749] (distance_warning) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/distance_warning__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/distance_warning/action/detail/dds_fastrtps/check_distance__type_support.cpp.o\x1b[0m\n'}
+[4.083309] (distance_warning) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/distance_warning__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/distance_warning/srv/detail/dds_fastrtps/set_threshold__type_support.cpp.o\x1b[0m\n'}
+[4.109745] (-) TimerEvent: {}
+[4.210270] (-) TimerEvent: {}
+[4.310795] (-) TimerEvent: {}
+[4.411282] (-) TimerEvent: {}
+[4.501907] (distance_warning) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking CXX shared library libdistance_warning__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[4.511386] (-) TimerEvent: {}
+[4.563538] (distance_warning) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/distance_warning__rosidl_typesupport_c.dir/rosidl_typesupport_c/distance_warning/srv/set_threshold__type_support.cpp.o\x1b[0m\n'}
+[4.566781] (distance_warning) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/distance_warning__rosidl_typesupport_c.dir/rosidl_typesupport_c/distance_warning/action/check_distance__type_support.cpp.o\x1b[0m\n'}
+[4.576656] (distance_warning) StdoutLine: {'line': b'[ 46%] Built target distance_warning__rosidl_typesupport_cpp\n'}
+[4.611502] (-) TimerEvent: {}
+[4.632397] (distance_warning) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libdistance_warning__rosidl_typesupport_c.so\x1b[0m\n'}
+[4.661938] (distance_warning) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library libdistance_warning__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[4.686458] (distance_warning) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libdistance_warning__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[4.709858] (distance_warning) StdoutLine: {'line': b'[ 51%] Built target distance_warning__rosidl_typesupport_c\n'}
+[4.711591] (-) TimerEvent: {}
+[4.716916] (distance_warning) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/distance_warning__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/distance_warning/action/detail/check_distance__type_support_c.cpp.o\x1b[0m\n'}
+[4.718346] (distance_warning) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/distance_warning__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/distance_warning/srv/detail/set_threshold__type_support_c.cpp.o\x1b[0m\n'}
+[4.737052] (distance_warning) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding C object CMakeFiles/distance_warning__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/distance_warning/srv/detail/set_threshold__type_support.c.o\x1b[0m\n'}
+[4.737412] (distance_warning) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding C object CMakeFiles/distance_warning__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/distance_warning/action/detail/check_distance__type_support.c.o\x1b[0m\n'}
+[4.765938] (distance_warning) StdoutLine: {'line': b'[ 59%] Built target distance_warning__rosidl_typesupport_fastrtps_cpp\n'}
+[4.810578] (distance_warning) StdoutLine: {'line': b'[ 59%] Built target distance_warning__rosidl_typesupport_introspection_cpp\n'}
+[4.811834] (-) TimerEvent: {}
+[4.812248] (distance_warning) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking C shared library libdistance_warning__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[4.860289] (distance_warning) StdoutLine: {'line': b'[ 61%] Built target distance_warning__rosidl_typesupport_introspection_c\n'}
+[4.912069] (-) TimerEvent: {}
+[5.012598] (-) TimerEvent: {}
+[5.113146] (-) TimerEvent: {}
+[5.130431] (distance_warning) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking CXX shared library libdistance_warning__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[5.213367] (-) TimerEvent: {}
+[5.235570] (distance_warning) StdoutLine: {'line': b'[ 63%] Built target distance_warning__rosidl_typesupport_fastrtps_c\n'}
+[5.265937] (distance_warning) StdoutLine: {'line': b'[ 63%] Built target distance_warning\n'}
+[5.296568] (distance_warning) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/distance_action_server.dir/src/distance_action_server.cpp.o\x1b[0m\n'}
+[5.297135] (distance_warning) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/distance_action_client.dir/src/distance_action_client.cpp.o\x1b[0m\n'}
+[5.299957] (distance_warning) StdoutLine: {'line': b'[ 69%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[5.300234] (distance_warning) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/set_threshold_service.dir/src/set_threshold_service.cpp.o\x1b[0m\n'}
+[5.313523] (-) TimerEvent: {}
+[5.413996] (-) TimerEvent: {}
+[5.514514] (-) TimerEvent: {}
+[5.615017] (-) TimerEvent: {}
+[5.715548] (-) TimerEvent: {}
+[5.816054] (-) TimerEvent: {}
+[5.916598] (-) TimerEvent: {}
+[6.017104] (-) TimerEvent: {}
+[6.117625] (-) TimerEvent: {}
+[6.218076] (-) TimerEvent: {}
+[6.253618] (distance_warning) StdoutLine: {'line': b'[ 71%] Built target distance_warning__py\n'}
+[6.287589] (distance_warning) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding C object CMakeFiles/distance_warning__rosidl_generator_py.dir/rosidl_generator_py/distance_warning/action/_check_distance_s.c.o\x1b[0m\n'}
+[6.289733] (distance_warning) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding C object CMakeFiles/distance_warning__rosidl_generator_py.dir/rosidl_generator_py/distance_warning/srv/_set_threshold_s.c.o\x1b[0m\n'}
+[6.318293] (-) TimerEvent: {}
+[6.418738] (-) TimerEvent: {}
+[6.469515] (distance_warning) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/distance_warning/libdistance_warning__rosidl_generator_py.so\x1b[0m\n'}
+[6.518977] (-) TimerEvent: {}
+[6.536661] (distance_warning) StdoutLine: {'line': b'[ 76%] Built target distance_warning__rosidl_generator_py\n'}
+[6.569964] (distance_warning) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding C object CMakeFiles/distance_warning__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/distance_warning/_distance_warning_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[6.572148] (distance_warning) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding C object CMakeFiles/distance_warning__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/distance_warning/_distance_warning_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[6.572530] (distance_warning) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/distance_warning__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/distance_warning/_distance_warning_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[6.619219] (-) TimerEvent: {}
+[6.719697] (-) TimerEvent: {}
+[6.734635] (distance_warning) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/distance_warning/distance_warning_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.737599] (distance_warning) StdoutLine: {'line': b'[ 86%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/distance_warning/distance_warning_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.806709] (distance_warning) StdoutLine: {'line': b'[ 86%] Built target distance_warning__rosidl_typesupport_fastrtps_c__pyext\n'}
+[6.809984] (distance_warning) StdoutLine: {'line': b'[ 86%] Built target distance_warning__rosidl_typesupport_introspection_c__pyext\n'}
+[6.819855] (-) TimerEvent: {}
+[6.825726] (distance_warning) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/distance_warning/distance_warning_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.897836] (distance_warning) StdoutLine: {'line': b'[ 88%] Built target distance_warning__rosidl_typesupport_c__pyext\n'}
+[6.920028] (-) TimerEvent: {}
+[7.020531] (-) TimerEvent: {}
+[7.121063] (-) TimerEvent: {}
+[7.221535] (-) TimerEvent: {}
+[7.322064] (-) TimerEvent: {}
+[7.422605] (-) TimerEvent: {}
+[7.443677] (distance_warning) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CXX executable distance_publisher\x1b[0m\n'}
+[7.522848] (-) TimerEvent: {}
+[7.623409] (-) TimerEvent: {}
+[7.658394] (distance_warning) StdoutLine: {'line': b'[ 90%] Built target distance_publisher\n'}
+[7.723648] (-) TimerEvent: {}
+[7.824215] (-) TimerEvent: {}
+[7.924754] (-) TimerEvent: {}
+[8.025288] (-) TimerEvent: {}
+[8.125830] (-) TimerEvent: {}
+[8.226408] (-) TimerEvent: {}
+[8.326919] (-) TimerEvent: {}
+[8.427456] (-) TimerEvent: {}
+[8.527990] (-) TimerEvent: {}
+[8.628532] (-) TimerEvent: {}
+[8.729059] (-) TimerEvent: {}
+[8.829606] (-) TimerEvent: {}
+[8.930144] (-) TimerEvent: {}
+[9.030571] (-) TimerEvent: {}
+[9.131093] (-) TimerEvent: {}
+[9.180558] (distance_warning) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable distance_action_server\x1b[0m\n'}
+[9.184360] (distance_warning) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking CXX executable distance_action_client\x1b[0m\n'}
+[9.231284] (-) TimerEvent: {}
+[9.331778] (-) TimerEvent: {}
+[9.376160] (distance_warning) StdoutLine: {'line': b'[ 94%] Built target distance_action_server\n'}
+[9.376487] (distance_warning) StdoutLine: {'line': b'[ 94%] Built target distance_action_client\n'}
+[9.431994] (-) TimerEvent: {}
+[9.532542] (-) TimerEvent: {}
+[9.633058] (-) TimerEvent: {}
+[9.733599] (-) TimerEvent: {}
+[9.834139] (-) TimerEvent: {}
+[9.934636] (-) TimerEvent: {}
+[10.035171] (-) TimerEvent: {}
+[10.096707] (distance_warning) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking CXX executable set_threshold_service\x1b[0m\n'}
+[10.135326] (-) TimerEvent: {}
+[10.235755] (-) TimerEvent: {}
+[10.329988] (distance_warning) StdoutLine: {'line': b'[ 96%] Built target set_threshold_service\n'}
+[10.335928] (-) TimerEvent: {}
+[10.436388] (-) TimerEvent: {}
+[10.536865] (-) TimerEvent: {}
+[10.637356] (-) TimerEvent: {}
+[10.737843] (-) TimerEvent: {}
+[10.838322] (-) TimerEvent: {}
+[10.938818] (-) TimerEvent: {}
+[11.039309] (-) TimerEvent: {}
+[11.139830] (-) TimerEvent: {}
+[11.182621] (distance_warning) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking CXX executable distance_listener\x1b[0m\n'}
+[11.240060] (-) TimerEvent: {}
+[11.309045] (distance_warning) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable distance_tf_broadcaster\x1b[0m\n'}
+[11.340256] (-) TimerEvent: {}
+[11.440561] (-) TimerEvent: {}
+[11.540940] (-) TimerEvent: {}
+[11.598662] (distance_warning) StdoutLine: {'line': b'[100%] Built target distance_listener\n'}
+[11.641139] (-) TimerEvent: {}
+[11.741416] (-) TimerEvent: {}
+[11.778322] (distance_warning) StdoutLine: {'line': b'[100%] Built target distance_tf_broadcaster\n'}
+[11.798156] (distance_warning) CommandEnded: {'returncode': 0}
+[11.800001] (distance_warning) JobProgress: {'identifier': 'distance_warning', 'progress': 'install'}
+[11.814363] (distance_warning) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning'], 'cwd': '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/loc'), ('USER', 'loc'), ('HOSTNAME', 'fedora'), ('GIT_ASKPASS', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass.sh'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/bin/helpers/browser.sh'), ('HOME', '/home/loc/.distrobox/ros2-home'), ('TERM_PROGRAM_VERSION', '1.114.0'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-c3ea7386-154b-4c5e-9496-5066aeed6884.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass-main.js'), ('PS1', '\\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$'), ('VSCODE_GIT_ASKPASS_NODE', '/home/loc/.distrobox/ros2-home/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('COLORTERM', 'truecolor'), ('container', 'podman'), ('REMOTE_CONTAINERS', 'true'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-829ca063-515e-4200-b040-d62807eb97ca.sock'), ('LOGNAME', 'loc'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERMINFO_DIRS', '/usr/share/terminfo:/run/host/usr/share/terminfo'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/loc/.distrobox/ros2-home/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISTROBOX_HOST_HOME', '/home/loc'), ('XDG_RUNTIME_DIR', '/run/user/0'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-829ca063-515e-4200-b040-d62807eb97ca.sock","/tmp/.X11-unix/X7","/home/loc/.distrobox/ros2-home/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':7'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/0/vscode-git-6b5aefb591.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-829ca063-515e-4200-b040-d62807eb97ca.sock'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('REMOTE_CONTAINERS_DISPLAY_SOCK', '/tmp/.X11-unix/X7'), ('SHELL', 'bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning'), ('CONTAINER_ID', 'ros2'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[11.823675] (distance_warning) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.833338] (distance_warning) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[11.833803] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/ament_index/resource_index/rosidl_interfaces/distance_warning\n'}
+[11.841515] (-) TimerEvent: {}
+[11.847478] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/check_distance.h\n'}
+[11.859649] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__functions.h\n'}
+[11.873937] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__struct.h\n'}
+[11.887054] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__type_support.h\n'}
+[11.898990] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/msg/rosidl_generator_c__visibility_control.h\n'}
+[11.912069] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__functions.h\n'}
+[11.922924] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__struct.h\n'}
+[11.933055] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__type_support.h\n'}
+[11.941630] (-) TimerEvent: {}
+[11.944659] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/set_threshold.h\n'}
+[11.956538] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/library_path.sh\n'}
+[11.970979] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/library_path.dsv\n'}
+[11.982707] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__rosidl_typesupport_fastrtps_c.h\n'}
+[11.997196] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[12.012437] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__rosidl_typesupport_fastrtps_c.h\n'}
+[12.025256] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/check_distance.hpp\n'}
+[12.040626] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__builder.hpp\n'}
+[12.041909] (-) TimerEvent: {}
+[12.051019] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__struct.hpp\n'}
+[12.065161] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__traits.hpp\n'}
+[12.077524] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__type_support.hpp\n'}
+[12.088971] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[12.103243] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__builder.hpp\n'}
+[12.116892] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__struct.hpp\n'}
+[12.128096] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__traits.hpp\n'}
+[12.140658] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__type_support.hpp\n'}
+[12.142075] (-) TimerEvent: {}
+[12.149800] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/set_threshold.hpp\n'}
+[12.160778] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.172016] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[12.182280] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.191943] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__rosidl_typesupport_introspection_c.h\n'}
+[12.205186] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[12.213830] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__rosidl_typesupport_introspection_c.h\n'}
+[12.223260] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/action/detail/check_distance__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.235719] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/include/distance_warning/distance_warning/srv/detail/set_threshold__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.242298] (-) TimerEvent: {}
+[12.245150] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/pythonpath.sh\n'}
+[12.258643] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/pythonpath.dsv\n'}
+[12.271855] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[12.282884] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[12.296980] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[12.309927] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[12.324339] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/__init__.py\n'}
+[12.334833] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/_distance_warning_s.ep.rosidl_typesupport_c.c\n'}
+[12.342385] (-) TimerEvent: {}
+[12.345067] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/_distance_warning_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[12.353882] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/_distance_warning_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[12.366731] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/action/__init__.py\n'}
+[12.377292] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/action/_check_distance.py\n'}
+[12.386747] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/action/_check_distance_s.c\n'}
+[12.397821] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/distance_warning_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[12.407011] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/distance_warning_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[12.417282] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/distance_warning_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[12.428893] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/libdistance_warning__rosidl_generator_py.so\n'}
+[12.438428] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/srv/__init__.py\n'}
+[12.442467] (-) TimerEvent: {}
+[12.451867] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/srv/_set_threshold.py\n'}
+[12.465609] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/srv/_set_threshold_s.c\n'}
+[12.476165] (distance_warning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/distance_warning_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[12.476542] (distance_warning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/distance_warning_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[12.476960] (distance_warning) StdoutLine: {'line': b'-- Up-to-date symlink: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/distance_warning_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[12.477138] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/ament_index/resource_index/rust_packages/distance_warning\n'}
+[12.490757] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/rust/Cargo.toml\n'}
+[12.501190] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/rust/build.rs\n'}
+[12.512527] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/rust/src/action.rs\n'}
+[12.524295] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/rust/src/action/rmw.rs\n'}
+[12.533514] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/rust/src/lib.rs\n'}
+[12.542668] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/rust/src/srv.rs\n'}
+[12.542812] (-) TimerEvent: {}
+[12.555273] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/rust/src/srv/rmw.rs\n'}
+[12.564967] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/srv/SetThreshold.idl\n'}
+[12.575729] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/action/CheckDistance.idl\n'}
+[12.588602] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/srv/SetThreshold.srv\n'}
+[12.599194] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/srv/SetThreshold_Request.msg\n'}
+[12.613449] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/srv/SetThreshold_Response.msg\n'}
+[12.623705] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/action/CheckDistance.action\n'}
+[12.634965] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/distance_warning/distance_listener\n'}
+[12.643011] (-) TimerEvent: {}
+[12.649065] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/distance_warning/distance_publisher\n'}
+[12.662124] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/distance_warning/set_threshold_service\n'}
+[12.674680] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/distance_warning/distance_action_server\n'}
+[12.686991] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/distance_warning/distance_action_client\n'}
+[12.696413] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/distance_warning/distance_tf_broadcaster\n'}
+[12.706992] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/launch/ distance_warning_full.launch.py\n'}
+[12.718974] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/launch/distance_warning.launch.py\n'}
+[12.728036] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/ament_index/resource_index/package_run_dependencies/distance_warning\n'}
+[12.737023] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/ament_index/resource_index/parent_prefix_path/distance_warning\n'}
+[12.743221] (-) TimerEvent: {}
+[12.749708] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/ament_prefix_path.sh\n'}
+[12.763458] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/ament_prefix_path.dsv\n'}
+[12.777775] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/path.sh\n'}
+[12.791442] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/environment/path.dsv\n'}
+[12.801596] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/local_setup.bash\n'}
+[12.815781] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/local_setup.sh\n'}
+[12.826917] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/local_setup.zsh\n'}
+[12.840755] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/local_setup.dsv\n'}
+[12.843349] (-) TimerEvent: {}
+[12.850263] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/package.dsv\n'}
+[12.859533] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/ament_index/resource_index/packages/distance_warning\n'}
+[12.872857] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/rosidl_cmake-extras.cmake\n'}
+[12.885585] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[12.897406] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[12.910679] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[12.922612] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[12.932271] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[12.943497] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[12.943800] (-) TimerEvent: {}
+[12.954282] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warningConfig.cmake\n'}
+[12.968522] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warningConfig-version.cmake\n'}
+[12.979233] (distance_warning) StdoutLine: {'line': b'-- Symlinking: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/package.xml\n'}
+[12.989064] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_generator_c.so\n'}
+[12.998103] (distance_warning) StdoutLine: {'line': b'-- Set runtime path of "/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_generator_c.so" to ""\n'}
+[12.998382] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_fastrtps_c.so\n'}
+[12.999877] (distance_warning) StdoutLine: {'line': b'-- Set runtime path of "/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[13.000135] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_fastrtps_cpp.so\n'}
+[13.001896] (distance_warning) StdoutLine: {'line': b'-- Set runtime path of "/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[13.002130] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_introspection_c.so\n'}
+[13.003253] (distance_warning) StdoutLine: {'line': b'-- Set runtime path of "/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_introspection_c.so" to ""\n'}
+[13.003507] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_c.so\n'}
+[13.004565] (distance_warning) StdoutLine: {'line': b'-- Set runtime path of "/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_c.so" to ""\n'}
+[13.004771] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_introspection_cpp.so\n'}
+[13.005870] (distance_warning) StdoutLine: {'line': b'-- Set runtime path of "/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[13.006062] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_cpp.so\n'}
+[13.007297] (distance_warning) StdoutLine: {'line': b'-- Set runtime path of "/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_typesupport_cpp.so" to ""\n'}
+[13.043983] (-) TimerEvent: {}
+[13.058868] (distance_warning) StdoutLine: {'line': b"Listing '/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning'...\n"}
+[13.059045] (distance_warning) StdoutLine: {'line': b"Compiling '/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/__init__.py'...\n"}
+[13.059125] (distance_warning) StdoutLine: {'line': b"Listing '/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/action'...\n"}
+[13.059197] (distance_warning) StdoutLine: {'line': b"Compiling '/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/action/__init__.py'...\n"}
+[13.059254] (distance_warning) StdoutLine: {'line': b"Compiling '/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/action/_check_distance.py'...\n"}
+[13.059308] (distance_warning) StdoutLine: {'line': b"Listing '/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/srv'...\n"}
+[13.059360] (distance_warning) StdoutLine: {'line': b"Compiling '/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/srv/__init__.py'...\n"}
+[13.059422] (distance_warning) StdoutLine: {'line': b"Compiling '/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/local/lib/python3.10/dist-packages/distance_warning/srv/_set_threshold.py'...\n"}
+[13.064568] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_generator_py.so\n'}
+[13.065958] (distance_warning) StdoutLine: {'line': b'-- Set runtime path of "/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/lib/libdistance_warning__rosidl_generator_py.so" to ""\n'}
+[13.066201] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_generator_cExport.cmake\n'}
+[13.066529] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_generator_cExport-noconfig.cmake\n'}
+[13.066874] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[13.067146] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[13.067426] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_generator_cppExport.cmake\n'}
+[13.067688] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[13.067995] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[13.068209] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_introspection_cExport.cmake\n'}
+[13.068448] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[13.068692] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_cExport.cmake\n'}
+[13.068830] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[13.068967] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[13.069209] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[13.069459] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_cppExport.cmake\n'}
+[13.069755] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/distance_warning__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[13.069989] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_generator_pyExport.cmake\n'}
+[13.070376] (distance_warning) StdoutLine: {'line': b'-- Installing: /home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning/share/distance_warning/cmake/export_distance_warning__rosidl_generator_pyExport-noconfig.cmake\n'}
+[13.074011] (distance_warning) CommandEnded: {'returncode': 0}
+[13.097844] (distance_warning) JobEnded: {'identifier': 'distance_warning', 'rc': 0}
+[13.098321] (-) EventReactorShutdown: {}

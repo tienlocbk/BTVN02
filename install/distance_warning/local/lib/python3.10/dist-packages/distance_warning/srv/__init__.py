@@ -1,1 +1,1 @@
-from distance_warning.srv._set_threshold import SetThreshold  # noqa: F401
+/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/rosidl_generator_py/distance_warning/srv/__init__.py

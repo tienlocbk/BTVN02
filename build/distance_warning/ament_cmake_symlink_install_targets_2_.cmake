@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/rosidl_generator_py/distance_warning/distance_warning_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" "TARGETS" "distance_warning__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/distance_warning")

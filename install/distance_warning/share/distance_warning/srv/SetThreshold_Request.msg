@@ -1,2 +1,1 @@
-# Request
-bool increase   # true = tăng, false = giảm
+/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/rosidl_cmake/srv/SetThreshold_Request.msg

@@ -1,0 +1,4 @@
+Invoking command in '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning -- -j32 -l32
+Invoked command in '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning -- -j32 -l32
+Invoking command in '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning
+Invoked command in '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning

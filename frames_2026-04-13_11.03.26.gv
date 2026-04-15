@@ -1,0 +1,8 @@
+digraph G {
+"world" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 3.937\nBuffer length: 4.826\nMost recent transform: 1776053006.724453\nOldest transform: 1776053001.898066\n"];
+"base_link" -> "sensor_link"[label=" Broadcaster: default_authority\nAverage rate: 3.937\nBuffer length: 4.826\nMost recent transform: 1776053006.724453\nOldest transform: 1776053001.898066\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1776053006.833505"[ shape=plaintext ] ;
+}->"world";
+}

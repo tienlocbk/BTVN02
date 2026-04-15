@@ -1,12 +1,1 @@
-// generated from rosidl_generator_cpp/resource/idl.hpp.em
-// generated code does not contain a copyright notice
-
-#ifndef DISTANCE_WARNING__SRV__SET_THRESHOLD_HPP_
-#define DISTANCE_WARNING__SRV__SET_THRESHOLD_HPP_
-
-#include "distance_warning/srv/detail/set_threshold__struct.hpp"
-#include "distance_warning/srv/detail/set_threshold__builder.hpp"
-#include "distance_warning/srv/detail/set_threshold__traits.hpp"
-#include "distance_warning/srv/detail/set_threshold__type_support.hpp"
-
-#endif  // DISTANCE_WARNING__SRV__SET_THRESHOLD_HPP_
+/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/rosidl_generator_cpp/distance_warning/srv/set_threshold.hpp

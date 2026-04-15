@@ -1,11 +1,1 @@
-# Goal
-float32 distance_to_check
----
-# Result
-bool is_safe
-string result_message
----
-# Feedback
-int32 step
-int32 total_steps
-string feedback_msg
+/home/loc/.distrobox/ros2-home/BTVN02/src/distance_warning/action/CheckDistance.action

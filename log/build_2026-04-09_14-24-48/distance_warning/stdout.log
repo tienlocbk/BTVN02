@@ -1,0 +1,7 @@
+[35m[1mConsolidate compiler generated dependencies of target distance_tf_broadcaster[0m
+[  1%] Built target distance_warning__rs
+[  3%] Built target distance_warning__cpp
+[ 11%] Built target distance_warning__rosidl_generator_c
+[ 15%] Built target distance_listener
+[ 19%] Built target distance_publisher
+[ 23%] Built target distance_tf_broadcaster

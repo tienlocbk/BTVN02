@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "distance_warning__rs",
+		"source" : "/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/distance_warning__rs"
+	}
+}

@@ -1,0 +1,26 @@
+[0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+  Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+  rosidl_target_interfaces()
+Call Stack (most recent call first):
+  CMakeLists.txt:34 (rosidl_target_interfaces)
+
+[0m
+[0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+  Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+  rosidl_target_interfaces()
+Call Stack (most recent call first):
+  CMakeLists.txt:38 (rosidl_target_interfaces)
+
+[0m
+[0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+  Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+  rosidl_target_interfaces()
+Call Stack (most recent call first):
+  CMakeLists.txt:42 (rosidl_target_interfaces)
+
+[0m
+failed to create symbolic link '/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/ament_cmake_python/distance_warning/distance_warning' because existing path cannot be removed: Is a directory
+gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_distance_warning.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_distance_warning] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:452: CMakeFiles/ament_cmake_python_symlink_distance_warning.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

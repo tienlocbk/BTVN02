@@ -1,18 +1,1 @@
-#![allow(non_camel_case_types)]
-#![allow(clippy::derive_partial_eq_without_eq)]
-#![allow(clippy::upper_case_acronyms)]
-
-
-#[path = "srv.rs"]
-mod srv_idiomatic;
-pub mod srv {
-    pub use super::srv_idiomatic::*;
-    pub mod rmw;
-}
-
-#[path = "action.rs"]
-mod action_idiomatic;
-pub mod action {
-    pub use super::action_idiomatic::*;
-    pub mod rmw;
-}
+/home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/rosidl_generator_rs/distance_warning/rust/src/lib.rs

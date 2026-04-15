@@ -1,7 +1,1 @@
-# Request
-bool increase   # true = tăng, false = giảm
----
-# Response
-bool success
-float32 new_threshold
-string message
+/home/loc/.distrobox/ros2-home/BTVN02/src/distance_warning/srv/SetThreshold.srv

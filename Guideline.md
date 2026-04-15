@@ -1,145 +1,319 @@
-# Bài Tập ROS2 — `distance_warning`
+# BTVN_02 — Mở rộng `distance_warning`
 
-> Language: C++ (rclcpp) | ROS2 Humble
+> Tiếp tục từ BTVN_01 | Language: C++ (rclcpp) | ROS2 Humble
 
 ---
 
-## 1. Cấu trúc Package
+## Tổng quan
+
+BTVN_02 **không tạo package mới**. Mở rộng thẳng vào package `distance_warning` từ BTVN_01 bằng cách thêm 4 node mới. Sau khi hoàn thành, hệ thống sẽ có 9 node hoạt động cùng nhau.
+
+### Cấu trúc package sau khi hoàn thành
 
 ```
 distance_warning/
 ├── src/
-│   ├── distance_publisher.cpp
-│   ├── distance_listener.cpp
-│   ├── set_threshold_service.cpp
-│   ├── distance_action_server.cpp
-│   └── distance_action_client.cpp
+│   ├── distance_publisher.cpp          ← BTVN_01 (giữ nguyên)
+│   ├── distance_listener.cpp           ← BTVN_01 (giữ nguyên)
+│   ├── set_threshold_service.cpp       ← BTVN_01 (giữ nguyên)
+│   ├── distance_action_server.cpp      ← BTVN_01 (giữ nguyên)
+│   ├── distance_action_client.cpp      ← BTVN_01 (giữ nguyên)
+│   ├── distance_tf_broadcaster.cpp     ← BTVN_02 mới 
+│   ├── distance_tf_listener.cpp        ← BTVN_02 mới 
+│   ├── distance_publisher_qos.cpp      ← BTVN_02 mới 
+│   └── distance_listener_qos.cpp       ← BTVN_02 mới 
 ├── action/
-│   └── CheckDistance.action
+│   └── CheckDistance.action            ← BTVN_01 (giữ nguyên)
 ├── srv/
-│   └── SetThreshold.srv
+│   └── SetThreshold.srv                ← BTVN_01 (giữ nguyên)
 ├── launch/
-│   └── distance_warning.launch.py
-├── CMakeLists.txt
-└── package.xml
-```
-
-### Tạo package
-
-```bash
-cd ~/ros2_ws/src
-ros2 pkg create --build-type ament_cmake distance_warning \
-  --dependencies rclcpp std_msgs rclcpp_action
-
-mkdir distance_warning/src distance_warning/action \
-      distance_warning/srv distance_warning/launch
+│   ├── distance_warning.launch.py      ← BTVN_01 (giữ nguyên)
+│   └── distance_warning_full.launch.py ← BTVN_02 mới 
+├── CMakeLists.txt                      ← cập nhật thêm dependencies
+└── package.xml                         ← cập nhật thêm dependencies
 ```
 
 ---
 
-## 2. Custom Interfaces
+## Bước 0 — Cập nhật dependencies
 
-### `srv/SetThreshold.srv`
-
-```
-# Request
-bool increase   # true = tăng, false = giảm
----
-# Response
-bool success
-float32 new_threshold
-string message
-```
-
-### `action/CheckDistance.action`
-
-```
-# Goal
-float32 distance_to_check
----
-# Result
-bool is_safe
-string result_message
----
-# Feedback
-int32 step
-int32 total_steps
-string feedback_msg
-```
-
-### `package.xml`
+### `package.xml` — thêm vào
 
 ```xml
-<build_depend>rosidl_default_generators</build_depend>
-<exec_depend>rosidl_default_runtime</exec_depend>
-<member_of_group>rosidl_interface_packages</member_of_group>
-
-<depend>rclcpp</depend>
-<depend>rclcpp_action</depend>
-<depend>std_msgs</depend>
+<depend>tf2</depend>
+<depend>tf2_ros</depend>
+<depend>tf2_geometry_msgs</depend>
+<depend>geometry_msgs</depend>
 ```
 
-### `CMakeLists.txt`
+### `CMakeLists.txt` — thêm vào phần `find_package`
 
 ```cmake
-cmake_minimum_required(VERSION 3.8)
-project(distance_warning)
-
-find_package(ament_cmake REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(rclcpp_action REQUIRED)
-find_package(std_msgs REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "srv/SetThreshold.srv"
-  "action/CheckDistance.action"
-)
-
-# TODO: Thêm executable cho từng node (xem hướng dẫn từng phần bên dưới)
-
-ament_package()
+find_package(tf2 REQUIRED)
+find_package(tf2_ros REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 ```
 
 ---
 
-## 3. Parameters
+## Kiến thức nền
 
-Trong ROS2, **không có global parameter server** như ROS1. Mỗi node tự khai báo và quản lý parameter của mình. Để đồng bộ `threshold` runtime, dùng service để các node thông báo cho nhau.
+### TF2
 
-### Khai báo trong C++
+TF2 quản lý quan hệ không gian giữa các coordinate frame. Mỗi frame kết nối với frame cha qua một transform (vị trí + rotation).
+
+```
+world
+  └── base_link          (vị trí robot)
+        └── sensor_link  (vị trí cảm biến so với robot)
+```
+
+- **Broadcaster** — publish transform lên `/tf`
+- **Listener** — đọc và tính transform giữa 2 frame bất kỳ
+
+Trong bài này, giá trị `distance` từ `/distance_topic` sẽ được dùng để di chuyển `sensor_link` — khoảng cách đo được càng lớn thì `sensor_link` càng xa `base_link`.
+
+### QoS
+
+QoS kiểm soát độ tin cậy khi truyền message.
+
+| Policy | Reliability | Dùng khi |
+| --- | --- | --- |
+| `RELIABLE` | Đảm bảo nhận đủ, retry nếu mất | Data quan trọng, tần suất thấp |
+| `BEST_EFFORT` | Ưu tiên tốc độ, chấp nhận mất packet | Sensor stream tần suất cao |
+
+> Publisher và Subscriber phải **compatible** QoS. `RELIABLE` subscriber **không nhận** được message từ `BEST_EFFORT` publisher.
+
+---
+
+## Phần 1 — TF2
+
+### 1.1 Node `distance_tf_broadcaster`
+
+**File:** `src/distance_tf_broadcaster.cpp`
+
+**Yêu cầu:**
+
+- Subscribe `/distance_topic` kiểu `std_msgs/msg/Float32`
+- Broadcast `world → base_link`: cố định tại gốc `(0, 0, 0)`
+- Broadcast `base_link → sensor_link`: `x = distance`, `y = 0`, `z = 0`
+- Broadcast mỗi lần nhận message từ `/distance_topic`
+
+**Code khung:**
 
 ```cpp
-class DistanceListener : public rclcpp::Node
+#include <rclcpp/rclcpp.hpp>
+#include <std_msgs/msg/float32.hpp>
+#include <geometry_msgs/msg/transform_stamped.hpp>
+#include <tf2_ros/transform_broadcaster.h>
+
+class DistanceTfBroadcaster : public rclcpp::Node
 {
 public:
-  DistanceListener() : Node("distance_listener")
+  DistanceTfBroadcaster() : Node("distance_tf_broadcaster")
   {
-    this->declare_parameter<double>("threshold", 0.5);
+    tf_broadcaster_ = std::make_shared<tf2_ros::TransformBroadcaster>(this);
+    // TODO: Subscribe '/distance_topic' gọi broadcastCallback
   }
 
 private:
-  double get_threshold()
+  void broadcastCallback(const std_msgs::msg::Float32::SharedPtr msg)
   {
-    return this->get_parameter("threshold").as_double();
+    auto now = this->get_clock()->now();
+
+    // --- world → base_link ---
+    geometry_msgs::msg::TransformStamped t_base;
+    t_base.header.stamp = now;
+    t_base.header.frame_id = "world";
+    t_base.child_frame_id = "base_link";
+    t_base.transform.translation.x = 0.0;
+    t_base.transform.translation.y = 0.0;
+    t_base.transform.translation.z = 0.0;
+    t_base.transform.rotation.w = 1.0;
+    tf_broadcaster_->sendTransform(t_base);
+
+    // --- base_link → sensor_link ---
+    geometry_msgs::msg::TransformStamped t_sensor;
+    t_sensor.header.stamp = now;
+    t_sensor.header.frame_id = "base_link";
+    t_sensor.child_frame_id = "sensor_link";
+    // TODO: Set translation.x = msg->data, y = 0, z = 0
+    // TODO: Set rotation.w = 1.0
+    tf_broadcaster_->sendTransform(t_sensor);
+
+    RCLCPP_INFO(this->get_logger(),
+      "Broadcasting sensor_link at x=%.2f m", msg->data);
   }
+
+  std::shared_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
+  rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr subscription_;
 };
+
+int main(int argc, char * argv[])
+{
+  rclcpp::init(argc, argv);
+  rclcpp::spin(std::make_shared<DistanceTfBroadcaster>());
+  rclcpp::shutdown();
+  return 0;
+}
 ```
 
-> Kiểm tra parameter đang chạy: `ros2 param get /distance_listener threshold`
+**Thêm vào `CMakeLists.txt`:**
+
+```cmake
+add_executable(distance_tf_broadcaster src/distance_tf_broadcaster.cpp)
+ament_target_dependencies(distance_tf_broadcaster
+  rclcpp std_msgs geometry_msgs tf2 tf2_ros)
+install(TARGETS distance_tf_broadcaster DESTINATION lib/${PROJECT_NAME})
+```
+
+**Kiểm tra:**
+
+```bash
+ros2 run tf2_ros tf2_echo base_link sensor_link
+ros2 run tf2_tools view_frames
+```
+
+**Expected output:**
+
+```
+[INFO] [distance_tf_broadcaster]: Broadcasting sensor_link at x=0.82 m
+[INFO] [distance_tf_broadcaster]: Broadcasting sensor_link at x=0.34 m
+
+# tf2_echo:
+At time 1234567890.0
+- Translation: [0.820, 0.000, 0.000]
+- Rotation: in Quaternion [0.000, 0.000, 0.000, 1.000]
+```
 
 ---
 
-## 4. Publisher & Subscriber
+### 1.2 Node `distance_tf_listener`
 
-### 4.1 Node `distance_publisher`
-
-**File:** `src/distance_publisher.cpp`
+**File:** `src/distance_tf_listener.cpp`
 
 **Yêu cầu:**
-- Publish `/distance_topic` kiểu `std_msgs/msg/Float32`
-- Giá trị ngẫu nhiên từ `0.1` đến `1.5` mét
-- Tần suất: **1 Hz**
+
+- Lookup transform `world → sensor_link` mỗi **1 giây**
+- Tính khoảng cách Euclidean từ world origin đến `sensor_link`
+- In khoảng cách tính được
+- Khi khoảng cách `> tf_threshold` (parameter, mặc định `1.0 m`): gọi service `/set_threshold` với `increase=false` để tự động giảm threshold cảnh báo
+- Declare parameter `tf_threshold` mặc định `1.0`
+
+**Code khung:**
+
+```cpp
+#include <rclcpp/rclcpp.hpp>
+#include <tf2_ros/buffer.h>
+#include <tf2_ros/transform_listener.h>
+#include <geometry_msgs/msg/transform_stamped.hpp>
+#include "distance_warning/srv/set_threshold.hpp"
+#include <cmath>
+
+using SetThreshold = distance_warning::srv::SetThreshold;
+
+class DistanceTfListener : public rclcpp::Node
+{
+public:
+  DistanceTfListener() : Node("distance_tf_listener")
+  {
+    this->declare_parameter<double>("tf_threshold", 1.0);
+
+    tf_buffer_ = std::make_shared<tf2_ros::Buffer>(this->get_clock());
+    tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
+
+    threshold_client_ = this->create_client<SetThreshold>("set_threshold");
+
+    // TODO: Tạo timer 1 Hz gọi lookupAndCheck()
+  }
+
+private:
+  void lookupAndCheck()
+  {
+    try {
+      geometry_msgs::msg::TransformStamped t = tf_buffer_->lookupTransform(
+        "world", "sensor_link", tf2::TimePointZero);
+
+      double x = t.transform.translation.x;
+      double y = t.transform.translation.y;
+      double z = t.transform.translation.z;
+
+      // TODO: Tính khoảng cách Euclidean: dist = sqrt(x² + y² + z²)
+      // TODO: In khoảng cách
+      // TODO: Nếu dist > tf_threshold → gọi callSetThreshold(false)
+
+    } catch (const tf2::TransformException & ex) {
+      RCLCPP_WARN(this->get_logger(), "TF lookup failed: %s", ex.what());
+    }
+  }
+
+  void callSetThreshold(bool increase)
+  {
+    if (!threshold_client_->wait_for_service(std::chrono::milliseconds(100))) {
+      RCLCPP_WARN(this->get_logger(), "set_threshold service not available");
+      return;
+    }
+    auto request = std::make_shared<SetThreshold::Request>();
+    request->increase = increase;
+    threshold_client_->async_send_request(request,
+      [this](rclcpp::Client<SetThreshold>::SharedFuture future) {
+        auto response = future.get();
+        if (response->success) {
+          RCLCPP_INFO(this->get_logger(),
+            "Auto-adjusted threshold to %.2f m", response->new_threshold);
+        }
+      });
+  }
+
+  std::shared_ptr<tf2_ros::Buffer> tf_buffer_;
+  std::shared_ptr<tf2_ros::TransformListener> tf_listener_;
+  rclcpp::Client<SetThreshold>::SharedPtr threshold_client_;
+  rclcpp::TimerBase::SharedPtr timer_;
+};
+
+int main(int argc, char * argv[])
+{
+  rclcpp::init(argc, argv);
+  rclcpp::spin(std::make_shared<DistanceTfListener>());
+  rclcpp::shutdown();
+  return 0;
+}
+```
+
+**Thêm vào `CMakeLists.txt`:**
+
+```cmake
+add_executable(distance_tf_listener src/distance_tf_listener.cpp)
+ament_target_dependencies(distance_tf_listener
+  rclcpp geometry_msgs tf2 tf2_ros tf2_geometry_msgs)
+rosidl_target_interfaces(distance_tf_listener ${PROJECT_NAME} "rosidl_typesupport_cpp")
+install(TARGETS distance_tf_listener DESTINATION lib/${PROJECT_NAME})
+```
+
+**Expected output:**
+
+```
+[INFO] [distance_tf_listener]: TF distance world->sensor_link: 0.73 m
+[INFO] [distance_tf_listener]: TF distance world->sensor_link: 1.21 m
+[WARN] [distance_tf_listener]: Sensor out of range! 1.21 m > tf_threshold 1.00 m
+[INFO] [distance_tf_listener]: Auto-adjusted threshold to 0.40 m
+```
+
+---
+
+## Phần 2 — QoS
+
+### 2.1 Node `distance_publisher_qos`
+
+**File:** `src/distance_publisher_qos.cpp`
+
+**Yêu cầu:**
+
+- Publish `/distance_reliable` với QoS `RELIABLE` — **1 Hz**
+- Publish `/distance_best_effort` với QoS `BEST_EFFORT` — **10 Hz**
+- Cùng dữ liệu ngẫu nhiên `0.1–1.5 m`
+- Log phân biệt rõ đang publish lên topic nào
 
 **Code khung:**
 
@@ -148,35 +322,57 @@ private:
 #include <std_msgs/msg/float32.hpp>
 #include <random>
 
-class DistancePublisher : public rclcpp::Node
+class DistancePublisherQoS : public rclcpp::Node
 {
 public:
-  DistancePublisher() : Node("distance_publisher")
+  DistancePublisherQoS() : Node("distance_publisher_qos")
   {
-    publisher_ = this->create_publisher<std_msgs::msg::Float32>("distance_topic", 10);
-    // TODO: Tạo timer gọi timerCallback mỗi 1 giây
-    // timer_ = this->create_wall_timer(...);
+    auto qos_reliable = rclcpp::QoS(10)
+      .reliability(rclcpp::ReliabilityPolicy::Reliable)
+      .durability(rclcpp::DurabilityPolicy::Volatile)
+      .history(rclcpp::HistoryPolicy::KeepLast);
+
+    auto qos_best_effort = rclcpp::QoS(10)
+      .reliability(rclcpp::ReliabilityPolicy::BestEffort)
+      .durability(rclcpp::DurabilityPolicy::Volatile)
+      .history(rclcpp::HistoryPolicy::KeepLast);
+
+    // TODO: Tạo publisher reliable trên '/distance_reliable'
+    // TODO: Tạo publisher best_effort trên '/distance_best_effort'
+    // TODO: Timer 1 Hz → publishReliable()
+    // TODO: Timer 100ms → publishBestEffort()
   }
 
 private:
-  void timerCallback()
+  float randomDistance()
   {
-    auto msg = std_msgs::msg::Float32();
-    // TODO: Gán giá trị ngẫu nhiên từ 0.1 đến 1.5
-    // Gợi ý: dùng std::uniform_real_distribution
-    // msg.data = ...;
-    publisher_->publish(msg);
-    RCLCPP_INFO(this->get_logger(), "Publishing: %.2f m", msg.data);
+    static std::mt19937 rng(std::random_device{}());
+    static std::uniform_real_distribution<float> dist(0.1f, 1.5f);
+    return dist(rng);
   }
 
-  rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr publisher_;
-  rclcpp::TimerBase::SharedPtr timer_;
+  void publishReliable()
+  {
+    auto msg = std_msgs::msg::Float32();
+    // TODO: msg.data = randomDistance(), publish, log "[RELIABLE 1Hz]"
+  }
+
+  void publishBestEffort()
+  {
+    auto msg = std_msgs::msg::Float32();
+    // TODO: msg.data = randomDistance(), publish, log "[BEST_EFFORT 10Hz]"
+  }
+
+  rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_reliable_;
+  rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr pub_best_effort_;
+  rclcpp::TimerBase::SharedPtr timer_reliable_;
+  rclcpp::TimerBase::SharedPtr timer_best_effort_;
 };
 
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<DistancePublisher>());
+  rclcpp::spin(std::make_shared<DistancePublisherQoS>());
   rclcpp::shutdown();
   return 0;
 }
@@ -185,21 +381,24 @@ int main(int argc, char * argv[])
 **Thêm vào `CMakeLists.txt`:**
 
 ```cmake
-add_executable(distance_publisher src/distance_publisher.cpp)
-ament_target_dependencies(distance_publisher rclcpp std_msgs)
-install(TARGETS distance_publisher DESTINATION lib/${PROJECT_NAME})
+add_executable(distance_publisher_qos src/distance_publisher_qos.cpp)
+ament_target_dependencies(distance_publisher_qos rclcpp std_msgs)
+install(TARGETS distance_publisher_qos DESTINATION lib/${PROJECT_NAME})
 ```
 
 ---
 
-### 4.2 Node `distance_listener`
+### 2.2 Node `distance_listener_qos`
 
-**File:** `src/distance_listener.cpp`
+**File:** `src/distance_listener_qos.cpp`
 
 **Yêu cầu:**
-- Subscribe `/distance_topic`
-- Lấy `threshold` từ parameter của chính node
-- Khi `distance < threshold`: in cảnh báo kèm giá trị và threshold
+
+- Subscribe `/distance_reliable` với QoS `RELIABLE`
+- Subscribe `/distance_best_effort` với QoS `BEST_EFFORT`
+- Đếm message nhận được từ mỗi topic
+- Mỗi **5 giây** in bảng thống kê và reset counter
+- Khi nhận message từ `/distance_reliable`: kiểm tra ngưỡng và in cảnh báo (tái sử dụng logic từ `distance_listener` BTVN_01)
 
 **Code khung:**
 
@@ -207,32 +406,65 @@ install(TARGETS distance_publisher DESTINATION lib/${PROJECT_NAME})
 #include <rclcpp/rclcpp.hpp>
 #include <std_msgs/msg/float32.hpp>
 
-class DistanceListener : public rclcpp::Node
+class DistanceListenerQoS : public rclcpp::Node
 {
 public:
-  DistanceListener() : Node("distance_listener")
+  DistanceListenerQoS()
+  : Node("distance_listener_qos"), count_reliable_(0), count_best_effort_(0)
   {
     this->declare_parameter<double>("threshold", 0.5);
-    // TODO: Tạo subscriber lắng nghe 'distance_topic'
-    // subscription_ = this->create_subscription<std_msgs::msg::Float32>(...);
+
+    auto qos_reliable = rclcpp::QoS(10)
+      .reliability(rclcpp::ReliabilityPolicy::Reliable);
+
+    auto qos_best_effort = rclcpp::QoS(10)
+      .reliability(rclcpp::ReliabilityPolicy::BestEffort);
+
+    // TODO: Subscribe '/distance_reliable' với qos_reliable → reliableCallback
+    // TODO: Subscribe '/distance_best_effort' với qos_best_effort → bestEffortCallback
+
+    stats_timer_ = this->create_wall_timer(
+      std::chrono::seconds(5),
+      std::bind(&DistanceListenerQoS::printStats, this));
   }
 
 private:
-  void listenerCallback(const std_msgs::msg::Float32::SharedPtr msg)
+  void reliableCallback(const std_msgs::msg::Float32::SharedPtr msg)
   {
-    double distance = msg->data;
+    count_reliable_++;
     double threshold = this->get_parameter("threshold").as_double();
-    // TODO: In khoảng cách nhận được
-    // TODO: Nếu distance < threshold, in cảnh báo bằng RCLCPP_WARN
+    RCLCPP_INFO(this->get_logger(), "[RELIABLE]    %.2f m (total: %d)",
+                msg->data, count_reliable_);
+    // TODO: Nếu msg->data < threshold → RCLCPP_WARN cảnh báo
   }
 
-  rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr subscription_;
+  void bestEffortCallback(const std_msgs::msg::Float32::SharedPtr msg)
+  {
+    count_best_effort_++;
+    RCLCPP_INFO(this->get_logger(), "[BEST_EFFORT] %.2f m (total: %d)",
+                msg->data, count_best_effort_);
+  }
+
+  void printStats()
+  {
+    RCLCPP_INFO(this->get_logger(), "--- Stats (last 5s) ---");
+    RCLCPP_INFO(this->get_logger(), "RELIABLE    : %d msg (expected ~5)",  count_reliable_);
+    RCLCPP_INFO(this->get_logger(), "BEST_EFFORT : %d msg (expected ~50)", count_best_effort_);
+    count_reliable_ = 0;
+    count_best_effort_ = 0;
+  }
+
+  rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr sub_reliable_;
+  rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr sub_best_effort_;
+  rclcpp::TimerBase::SharedPtr stats_timer_;
+  int count_reliable_;
+  int count_best_effort_;
 };
 
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<DistanceListener>());
+  rclcpp::spin(std::make_shared<DistanceListenerQoS>());
   rclcpp::shutdown();
   return 0;
 }
@@ -241,318 +473,47 @@ int main(int argc, char * argv[])
 **Thêm vào `CMakeLists.txt`:**
 
 ```cmake
-add_executable(distance_listener src/distance_listener.cpp)
-ament_target_dependencies(distance_listener rclcpp std_msgs)
-install(TARGETS distance_listener DESTINATION lib/${PROJECT_NAME})
+add_executable(distance_listener_qos src/distance_listener_qos.cpp)
+ament_target_dependencies(distance_listener_qos rclcpp std_msgs)
+install(TARGETS distance_listener_qos DESTINATION lib/${PROJECT_NAME})
 ```
 
 **Expected output:**
 
 ```
-[INFO] [distance_listener]: Distance received: 0.82 m
-[INFO] [distance_listener]: Distance received: 0.34 m
-[WARN] [distance_listener]: Warning: Object too close! (0.34 m < threshold: 0.50 m)
+[RELIABLE]    0.73 m (total: 1)
+[BEST_EFFORT] 1.21 m (total: 1)
+[BEST_EFFORT] 0.44 m (total: 2)
+[RELIABLE]    0.28 m (total: 2)
+[WARN] [distance_listener_qos]: Warning: Object too close! (0.28 m < threshold: 0.50 m)
+--- Stats (last 5s) ---
+RELIABLE    : 5 msg (expected ~5)
+BEST_EFFORT : 48 msg (expected ~50)
 ```
 
----
-
-## 5. Service
-
-### 5.1 Node `set_threshold_service` (Server)
-
-**File:** `src/set_threshold_service.cpp`
-
-**Yêu cầu:**
-- Tạo service server `/set_threshold`
-- `request->increase = true` → tăng `0.1` (tối đa `1.5`)
-- `request->increase = false` → giảm `0.1` (tối thiểu `0.1`)
-- Cập nhật parameter `threshold` của node
-- Trả về `success`, `new_threshold`, `message`
-
-**Code khung:**
-
-```cpp
-#include <rclcpp/rclcpp.hpp>
-#include "distance_warning/srv/set_threshold.hpp"
-
-using SetThreshold = distance_warning::srv::SetThreshold;
-
-class SetThresholdService : public rclcpp::Node
-{
-public:
-  SetThresholdService() : Node("set_threshold_service")
-  {
-    this->declare_parameter<double>("threshold", 0.5);
-    // TODO: Tạo service server
-    // service_ = this->create_service<SetThreshold>(
-    //   "set_threshold",
-    //   std::bind(&SetThresholdService::handleSetThreshold, this,
-    //             std::placeholders::_1, std::placeholders::_2));
-  }
-
-private:
-  void handleSetThreshold(
-    const SetThreshold::Request::SharedPtr request,
-    SetThreshold::Response::SharedPtr response)
-  {
-    double current = this->get_parameter("threshold").as_double();
-    double new_threshold = current;
-
-    // TODO: Tăng hoặc giảm new_threshold theo request->increase
-    // TODO: Clamp giá trị trong khoảng [0.1, 1.5]
-    // TODO: Cập nhật parameter bằng this->set_parameter(...)
-    // TODO: Set response->success, new_threshold, message
-
-    RCLCPP_INFO(this->get_logger(), "Threshold updated: %.2f -> %.2f m",
-                current, new_threshold);
-  }
-
-  rclcpp::Service<SetThreshold>::SharedPtr service_;
-};
-
-int main(int argc, char * argv[])
-{
-  rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<SetThresholdService>());
-  rclcpp::shutdown();
-  return 0;
-}
-```
-
-**Thêm vào `CMakeLists.txt`:**
-
-```cmake
-add_executable(set_threshold_service src/set_threshold_service.cpp)
-ament_target_dependencies(set_threshold_service rclcpp)
-rosidl_target_interfaces(set_threshold_service ${PROJECT_NAME} "rosidl_typesupport_cpp")
-install(TARGETS set_threshold_service DESTINATION lib/${PROJECT_NAME})
-```
-
-### 5.2 Test bằng CLI
+### 2.3 Thử nghiệm QoS incompatible
 
 ```bash
-# Tăng threshold
-ros2 service call /set_threshold distance_warning/srv/SetThreshold '{increase: true}'
+# Cố tình subscribe BEST_EFFORT topic bằng RELIABLE subscriber
+ros2 topic echo /distance_best_effort --qos-reliability reliable
 
-# Giảm threshold
-ros2 service call /set_threshold distance_warning/srv/SetThreshold '{increase: false}'
+# Quan sát QoS của từng topic
+ros2 topic info /distance_reliable --verbose
+ros2 topic info /distance_best_effort --verbose
 ```
 
-**Expected output:**
+ROS2 sẽ in warning:
 
 ```
-[INFO] [set_threshold_service]: Threshold updated: 0.50 -> 0.60 m
-
-# Response:
-# success: true
-# new_threshold: 0.6000000238418579
-# message: Threshold increased to 0.60 m
+New subscription discovered on topic '/distance_best_effort',
+requesting incompatible QoS. No messages will be sent to it.
 ```
 
 ---
 
-## 6. Action
+## Launch File
 
-### 6.1 Node `distance_action_server` (Server)
-
-**File:** `src/distance_action_server.cpp`
-
-**Yêu cầu:**
-- Tạo action server `/check_distance`
-- Nhận goal `distance_to_check: float32`
-- Xử lý qua **5 bước**, mỗi bước delay **500ms**, gửi feedback từng bước
-
-| Bước | `feedback_msg` |
-|------|----------------|
-| 1/5 | `Receiving distance value...` |
-| 2/5 | `Fetching threshold parameter...` |
-| 3/5 | `Comparing values...` |
-| 4/5 | `Generating result...` |
-| 5/5 | `Done.` |
-
-- Trả về `is_safe = true` nếu `distance >= threshold`
-
-**Code khung:**
-
-```cpp
-#include <rclcpp/rclcpp.hpp>
-#include <rclcpp_action/rclcpp_action.hpp>
-#include <thread>
-#include "distance_warning/action/check_distance.hpp"
-
-using CheckDistance = distance_warning::action::CheckDistance;
-using GoalHandle = rclcpp_action::ServerGoalHandle<CheckDistance>;
-
-class DistanceActionServer : public rclcpp::Node
-{
-public:
-  DistanceActionServer() : Node("distance_action_server")
-  {
-    this->declare_parameter<double>("threshold", 0.5);
-    // TODO: Tạo action server
-    // action_server_ = rclcpp_action::create_server<CheckDistance>(
-    //   this, "check_distance",
-    //   std::bind(&DistanceActionServer::handleGoal, this, ...),
-    //   std::bind(&DistanceActionServer::handleCancel, this, ...),
-    //   std::bind(&DistanceActionServer::handleAccepted, this, ...));
-  }
-
-private:
-  rclcpp_action::GoalResponse handleGoal(
-    const rclcpp_action::GoalUUID &,
-    std::shared_ptr<const CheckDistance::Goal> goal)
-  {
-    RCLCPP_INFO(this->get_logger(), "Received goal: check %.2f m", goal->distance_to_check);
-    return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
-  }
-
-  rclcpp_action::CancelResponse handleCancel(const std::shared_ptr<GoalHandle>)
-  {
-    return rclcpp_action::CancelResponse::ACCEPT;
-  }
-
-  void handleAccepted(const std::shared_ptr<GoalHandle> goal_handle)
-  {
-    std::thread{std::bind(&DistanceActionServer::execute, this, goal_handle)}.detach();
-  }
-
-  void execute(const std::shared_ptr<GoalHandle> goal_handle)
-  {
-    float distance = goal_handle->get_goal()->distance_to_check;
-    auto feedback = std::make_shared<CheckDistance::Feedback>();
-    auto result = std::make_shared<CheckDistance::Result>();
-
-    std::vector<std::string> steps = {
-      "Receiving distance value...",
-      "Fetching threshold parameter...",
-      "Comparing values...",
-      "Generating result...",
-      "Done."
-    };
-
-    // TODO: Loop qua 5 bước:
-    //   - Set feedback->step, total_steps, feedback_msg
-    //   - goal_handle->publish_feedback(feedback)
-    //   - std::this_thread::sleep_for(std::chrono::milliseconds(500))
-
-    // TODO: Lấy threshold, so sánh với distance
-    // TODO: Set result->is_safe và result->result_message
-    // TODO: goal_handle->succeed(result)
-  }
-
-  rclcpp_action::Server<CheckDistance>::SharedPtr action_server_;
-};
-
-int main(int argc, char * argv[])
-{
-  rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<DistanceActionServer>());
-  rclcpp::shutdown();
-  return 0;
-}
-```
-
-**Thêm vào `CMakeLists.txt`:**
-
-```cmake
-add_executable(distance_action_server src/distance_action_server.cpp)
-ament_target_dependencies(distance_action_server rclcpp rclcpp_action)
-rosidl_target_interfaces(distance_action_server ${PROJECT_NAME} "rosidl_typesupport_cpp")
-install(TARGETS distance_action_server DESTINATION lib/${PROJECT_NAME})
-```
-
----
-
-### 6.2 Node `distance_action_client` (Client)
-
-**File:** `src/distance_action_client.cpp`
-
-**Yêu cầu:**
-- Gửi goal với `distance_to_check` (hardcode hoặc từ `argv`)
-- In feedback mỗi bước nhận được
-- In kết quả cuối cùng rõ ràng
-
-**Code khung:**
-
-```cpp
-#include <rclcpp/rclcpp.hpp>
-#include <rclcpp_action/rclcpp_action.hpp>
-#include "distance_warning/action/check_distance.hpp"
-
-using CheckDistance = distance_warning::action::CheckDistance;
-using GoalHandle = rclcpp_action::ClientGoalHandle<CheckDistance>;
-
-class DistanceActionClient : public rclcpp::Node
-{
-public:
-  DistanceActionClient() : Node("distance_action_client")
-  {
-    client_ = rclcpp_action::create_client<CheckDistance>(this, "check_distance");
-  }
-
-  void sendGoal(float distance)
-  {
-    if (!client_->wait_for_action_server(std::chrono::seconds(5))) {
-      RCLCPP_ERROR(this->get_logger(), "Action server not available");
-      return;
-    }
-
-    auto goal_msg = CheckDistance::Goal();
-    goal_msg.distance_to_check = distance;
-    RCLCPP_INFO(this->get_logger(), "Sending goal: check %.2f m", distance);
-
-    auto send_goal_options = rclcpp_action::Client<CheckDistance>::SendGoalOptions();
-
-    // TODO: Set send_goal_options.feedback_callback
-    //   - In từng bước: [step/total_steps]: feedback_msg
-
-    // TODO: Set send_goal_options.result_callback
-    //   - In SAFE hoặc NOT SAFE theo result->is_safe
-
-    client_->async_send_goal(goal_msg, send_goal_options);
-  }
-
-private:
-  rclcpp_action::Client<CheckDistance>::SharedPtr client_;
-};
-
-int main(int argc, char * argv[])
-{
-  rclcpp::init(argc, argv);
-  auto node = std::make_shared<DistanceActionClient>();
-  node->sendGoal(0.3f);  // TODO: Thay bằng argv nếu muốn
-  rclcpp::spin(node);
-  rclcpp::shutdown();
-  return 0;
-}
-```
-
-**Thêm vào `CMakeLists.txt`:**
-
-```cmake
-add_executable(distance_action_client src/distance_action_client.cpp)
-ament_target_dependencies(distance_action_client rclcpp rclcpp_action)
-rosidl_target_interfaces(distance_action_client ${PROJECT_NAME} "rosidl_typesupport_cpp")
-install(TARGETS distance_action_client DESTINATION lib/${PROJECT_NAME})
-```
-
-**Expected output:**
-
-```
-[INFO] [distance_action_client]: Sending goal: check 0.30 m
-[INFO] [distance_action_client]: Feedback [1/5]: Receiving distance value...
-[INFO] [distance_action_client]: Feedback [2/5]: Fetching threshold parameter...
-[INFO] [distance_action_client]: Feedback [3/5]: Comparing values...
-[INFO] [distance_action_client]: Feedback [4/5]: Generating result...
-[INFO] [distance_action_client]: Feedback [5/5]: Done.
-[WARN] [distance_action_client]: RESULT: NOT SAFE — 0.30 m < threshold 0.50 m
-```
-
----
-
-## 7. Launch File
-
-**File:** `launch/distance_warning.launch.py`
+**File:** `launch/distance_warning_full.launch.py`
 
 ```python
 from launch import LaunchDescription
@@ -562,44 +523,47 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     threshold_arg = DeclareLaunchArgument(
-        'threshold',
-        default_value='0.5',
+        'threshold', default_value='0.5',
         description='Distance warning threshold in meters'
     )
     threshold = LaunchConfiguration('threshold')
 
     return LaunchDescription([
         threshold_arg,
-        Node(
-            package='distance_warning',
-            executable='distance_publisher',
-            name='distance_publisher'
-        ),
-        Node(
-            package='distance_warning',
-            executable='distance_listener',
-            name='distance_listener',
-            parameters=[{'threshold': threshold}]
-        ),
-        Node(
-            package='distance_warning',
-            executable='set_threshold_service',
-            name='set_threshold_service',
-            parameters=[{'threshold': threshold}]
-        ),
-        Node(
-            package='distance_warning',
-            executable='distance_action_server',
-            name='distance_action_server',
-            parameters=[{'threshold': threshold}]
-        ),
+
+        # ── BTVN_01 ────────────────────────────────────
+        Node(package='distance_warning',
+             executable='distance_publisher',
+             name='distance_publisher', output='screen'),
+        Node(package='distance_warning',
+             executable='distance_listener',
+             name='distance_listener', output='screen',
+             parameters=[{'threshold': threshold}]),
+        Node(package='distance_warning',
+             executable='set_threshold_service',
+             name='set_threshold_service', output='screen',
+             parameters=[{'threshold': threshold}]),
+        Node(package='distance_warning',
+             executable='distance_action_server',
+             name='distance_action_server', output='screen',
+             parameters=[{'threshold': threshold}]),
+
+        # ── BTVN_02 ────────────────────────────────────
+        Node(package='distance_warning',
+             executable='distance_tf_broadcaster',
+             name='distance_tf_broadcaster', output='screen'),
+        Node(package='distance_warning',
+             executable='distance_tf_listener',
+             name='distance_tf_listener', output='screen',
+             parameters=[{'tf_threshold': 1.0}]),
+        Node(package='distance_warning',
+             executable='distance_publisher_qos',
+             name='distance_publisher_qos', output='screen'),
+        Node(package='distance_warning',
+             executable='distance_listener_qos',
+             name='distance_listener_qos', output='screen',
+             parameters=[{'threshold': threshold}]),
     ])
-```
-
-**Thêm vào `CMakeLists.txt`:**
-
-```cmake
-install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
 ```
 
 **Build và chạy:**
@@ -609,25 +573,22 @@ cd ~/ros2_ws
 colcon build --packages-select distance_warning
 source install/setup.bash
 
-# Chạy với threshold mặc định
-ros2 launch distance_warning distance_warning.launch.py
-
-# Chạy với threshold tùy chỉnh
-ros2 launch distance_warning distance_warning.launch.py threshold:=0.8
+ros2 launch distance_warning distance_warning_full.launch.py
 ```
 
 ---
 
-## 8. Tiêu chí chấp nhận
+## Tiêu chí chấp nhận
 
-| # | Tiêu chí | Kiểm tra bằng |
-|---|----------|---------------|
-| 1 | Package build không có warning | `colcon build` |
-| 2 | `distance_publisher` publish đúng 1 Hz | `ros2 topic hz /distance_topic` |
-| 3 | `distance_listener` in cảnh báo khi `distance < threshold` | Quan sát log |
-| 4 | Service thay đổi được `threshold` runtime | `ros2 service call ...` |
-| 5 | Sau khi gọi service, listener dùng threshold mới | Quan sát log |
-| 6 | Action server gửi đủ 5 bước feedback | Chạy action client |
-| 7 | Action trả về `is_safe` đúng theo threshold hiện tại | Test nhiều giá trị |
-| 8 | Launch file khởi động toàn bộ hệ thống một lệnh | `ros2 launch ...` |
-| 9 | `rqt_graph` hiển thị đủ node và topic | `rqt_graph` |
+| #   | Tiêu chí | Kiểm tra bằng |
+| --- | --- | --- |
+| 1   | Package build không có warning sau khi thêm dependencies | `colcon build` |
+| 2   | `distance_tf_broadcaster` broadcast đủ 2 frame lên `/tf` | `ros2 run tf2_ros tf2_echo base_link sensor_link` |
+| 3   | `sensor_link` x thay đổi theo giá trị `/distance_topic` | So sánh log publisher và tf2_echo |
+| 4   | `distance_tf_listener` tính đúng khoảng cách từ TF | Quan sát log |
+| 5   | Khi sensor > `tf_threshold`, tự động gọi `/set_threshold` | Quan sát log cả 2 node |
+| 6   | `/distance_reliable` publish đúng 1 Hz | `ros2 topic hz /distance_reliable` |
+| 7   | `/distance_best_effort` publish đúng 10 Hz | `ros2 topic hz /distance_best_effort` |
+| 8   | Bảng stats in đúng số lượng sau 5 giây | Quan sát log |
+| 9   | QoS incompatible test → warning xuất hiện | `ros2 topic echo ... --qos-reliability reliable` |
+| 10  | Launch file full khởi động đủ 8 node | `rqt_graph` |

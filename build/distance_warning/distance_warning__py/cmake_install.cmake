@@ -1,8 +1,8 @@
-# Install script for directory: /home/loc/.distrobox/ros2-home/ros2_ws/build/distance_warning/distance_warning__py
+# Install script for directory: /home/loc/.distrobox/ros2-home/BTVN02/build/distance_warning/distance_warning__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/loc/.distrobox/ros2-home/ros2_ws/install/distance_warning")
+  set(CMAKE_INSTALL_PREFIX "/home/loc/.distrobox/ros2-home/BTVN02/install/distance_warning")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
